@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V0.5~
+VERSION ~V0.2~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
