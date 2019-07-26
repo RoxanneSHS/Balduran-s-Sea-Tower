@@ -1,0 +1,69 @@
+IF
+Global("StoGotPass","GLOBAL",66)
+Global("StoOtherWay","Sto104",0)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto104",1)
+CreateCreature("Zhalim",[1261.600],3)
+ActionOverride("Zhalimar",SetNumTimesTalkedTo(1))
+Wait(2)
+ActionOverride("Zhalimar",Enemy())
+Continue()
+END
+
+IF
+Global("StoOtherWay","Sto104",1)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto104",2)
+CreateCreature("Naaman",[1070.870],10)
+CreateCreature("Aasim",[1315.730],0)
+CreateCreature("Stogrd1",[1420.360],3)
+CreateCreature("Stogrd1",[680.770],12)
+CreateCreature("Winski",[1040.620],14)
+CreateCreature("Tazok2",[1350.810],14)
+Wait(2)
+ActionOverride("Naaman",Enemy())
+ActionOverride("Aasim",Enemy())
+ActionOverride("Tazok",Enemy())
+Continue()
+END
+
+IF
+HPLT("Tazok",50)
+THEN
+RESPONSE #100
+ActionOverride("Winski",ForceSpell(Myself,DRYAD_TELEPORT)) 
+Wait(1)
+ActionOverride("Tazok",ForceSpell(Myself,DRYAD_TELEPORT))
+END
+
+IF
+HPLT("Naaman",40)
+THEN
+RESPONSE #100
+ActionOverride("Naaman",ForceSpell(Myself,DRYAD_TELEPORT))
+END
+
+IF
+HPLT("Zhalimar",50)
+THEN
+RESPONSE #100
+ActionOverride("Zhalimar",ForceSpell(Myself,DRYAD_TELEPORT))
+END
+
+IF
+HPLT("Aasim",50)
+THEN
+RESPONSE #100
+ActionOverride("Aasim",ForceSpell(Myself,DRYAD_TELEPORT))
+END
+
+IF
+Global("StoOtherWay","Sto104",2)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto104",3)
+TriggerActivation("OutCellar",FALSE)
+TriggerActivation("OutTower",FALSE)
+END

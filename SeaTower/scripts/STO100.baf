@@ -1,0 +1,28 @@
+IF
+GlobalGT("StoGotPass","GLOBAL",1)
+InMyArea("Smuggler")
+THEN
+RESPONSE #100
+ActionOverride("Smuggler",DestroySelf())
+Continue()
+END
+
+IF
+Global("StoGotPass","GLOBAL",1)
+Global("StoOtherWay","Sto100",0)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto100",1)
+CreateCreature("Smuggl",[616.150],3)
+END
+
+IF
+Global("StoGotPass","GLOBAL",66)
+Global("StoOtherWay","Sto100",1)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto100",2)
+CreateCreature("Stogrd1",[3661.2793],3)
+CreateCreature("Stogrd1",[3729.2661],2)
+END
+

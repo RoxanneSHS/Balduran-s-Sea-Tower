@@ -1,0 +1,23 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+SetGlobal("StoTowerHostile","Global",1)
+Wait(1)
+FadeToColor([20.0],0)
+Wait(1)
+JumpToPoint([3425.3088])
+ActionOverride(Player2,JumpToPoint([3462.3110]))
+ActionOverride(Player3,JumpToPoint([3508.3111]))
+ActionOverride(Player4,JumpToPoint([3633.3077]))
+ActionOverride(Player5,JumpToPoint([3545.3059]))
+ActionOverride(Player6,JumpToPoint([3332.3092]))
+Wait(1)
+MoveViewObject(Player1,INSTANT)
+FadeFromColor([20.0],0)
+Wait(1)
+SetGlobal("StoGotPass","GLOBAL",66)
+Wait(1)
+EndCutSceneMode()
+END

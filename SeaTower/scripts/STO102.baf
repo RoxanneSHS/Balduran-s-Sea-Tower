@@ -1,0 +1,42 @@
+IF
+Global("Arealook","Sto102",0)
+THEN
+RESPONSE #100
+SetGlobal("Arealook","Sto102",1)
+TriggerActivation("Dungeon",FALSE)
+END
+
+IF
+GlobalLT("Arealook","Sto102",9)
+GlobalLT("STO_ScarDoppel","Global",10)
+OR(3)
+GlobalGT("Chapter","Global",7)
+Dead("Sarevok")
+PartyHasItem("Misc78")
+THEN
+RESPONSE #100
+SetGlobal("Arealook","Sto102",9)
+TriggerActivation("ClosedInfo",FALSE)
+AmbientActivate("Weave",FALSE)
+ActionOverride("Stomage1",DestroySelf())
+END
+
+IF
+Global("Arealook","Sto102",2)
+THEN
+RESPONSE #100
+SetGlobal("Arealook","Sto102",3)
+TriggerActivation("ClosedInfo",FALSE)
+AmbientActivate("Weave",FALSE)
+TriggerActivation("Dungeon",TRUE)
+END
+
+IF
+Global("STO_ScarDoppel","Global",12)
+Global("Arealook","Sto102",1)
+THEN
+RESPONSE #100
+SetGlobal("Arealook","Sto102",4)
+TriggerActivation("ClosedInfo",FALSE)
+AmbientActivate("Weave",FALSE)
+END

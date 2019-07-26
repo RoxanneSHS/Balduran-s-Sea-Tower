@@ -1,0 +1,15 @@
+IF
+  Global("OL_Candlekeep_Inn","%Candlekeep_Inn_L2%",0)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("SCRL72",0,0,0))
+    SetGlobal("OL_Candlekeep_Inn","%Candlekeep_Inn_L2%",1)
+END
+
+IF
+  Global("OL_Candlekeep_Inn","%Candlekeep_Inn_L2%",1)
+THEN
+  RESPONSE #100
+    ActionOverride("Container2",CreateItem("POTN60",0,0,0))
+    SetGlobal("OL_Candlekeep_Inn","%Candlekeep_Inn_L2%",2)
+END

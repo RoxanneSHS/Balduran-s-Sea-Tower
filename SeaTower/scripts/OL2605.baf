@@ -1,0 +1,31 @@
+IF
+  Global("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",0)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("POTN17",0,0,0))
+    SetGlobal("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",1)
+END
+
+IF
+  Global("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",1)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("POTN20",0,0,0))
+    SetGlobal("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",2)
+END
+
+IF
+  Global("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",2)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("POTN08",0,0,0))
+    SetGlobal("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",3)
+END
+
+IF
+  Global("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",3)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("GBERRY",5,0,0))
+    SetGlobal("OL_Candlekeep_Priest","%Candlekeep_Infirmary%",4)
+END

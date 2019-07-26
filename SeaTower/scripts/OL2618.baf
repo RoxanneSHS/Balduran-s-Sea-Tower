@@ -1,0 +1,23 @@
+IF
+  Global("OL_Hulls_Long_Sword","%Candlekeep_Barracks%",0)
+THEN
+  RESPONSE #100
+    ActionOverride("Container5",DestroyItem("SW1H12"))
+    SetGlobal("OL_Hulls_Long_Sword","%Candlekeep_Barracks%",1)
+END
+
+IF
+  Global("OL_Hulls_Long_Sword","%Candlekeep_Barracks%",1)
+THEN
+  RESPONSE #100
+    ActionOverride("Container5",CreateItem("OLSW1H12",0,0,0))
+    SetGlobal("OL_Hulls_Long_Sword","%Candlekeep_Barracks%",2)
+END
+
+IF
+  Global("OL_Hulls_Long_Sword","%Candlekeep_Barracks%",2)
+THEN
+  RESPONSE #100
+    ActionOverride("Container5",CreateItem("GBERRY",3,0,0))
+    SetGlobal("OL_Hulls_Long_Sword","%Candlekeep_Barracks%",3)
+END

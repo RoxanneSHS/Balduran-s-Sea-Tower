@@ -1,0 +1,8 @@
+IF
+Global("Sto_ConvincedChart","Global",3)
+PartyHasItem("Misc1c")
+THEN
+RESPONSE #100
+SetGlobal("Sto_ConvincedChart","Global",4)
+EraseJournalEntry(@1003)
+END

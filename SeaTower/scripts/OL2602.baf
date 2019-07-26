@@ -1,0 +1,15 @@
+IF
+  Global("OL_Assassin_Shank","%Candlekeep_PriestsQuarters%",0)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("LEAT01",0,0,0))
+    SetGlobal("OL_Assassin_Shank","%Candlekeep_PriestsQuarters%",1)
+END
+
+IF
+  Global("OL_Assassin_Shank","%Candlekeep_PriestsQuarters%",1)
+THEN
+  RESPONSE #100
+    ActionOverride("Container3",CreateItem("SCRL77",0,0,0))
+    SetGlobal("OL_Assassin_Shank","%Candlekeep_PriestsQuarters%",2)
+END

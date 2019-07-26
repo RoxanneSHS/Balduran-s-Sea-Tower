@@ -1,0 +1,19 @@
+IF
+Global("Sto_ConvincedChart","Global",3)
+Global("NeedToMove","Locals",0)
+THEN
+RESPONSE #100
+SetGlobal("NeedToMove","Locals",1)
+MoveToObjectNoInterrupt("fcook2")
+END
+
+IF
+OR(2)
+AttackedBy([GOODCUTOFF],DEFAULT)
+Global("StoTowerHostile","Global",1)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+SetGlobal("StoTowerHostile","Global",1)
+Enemy()
+END

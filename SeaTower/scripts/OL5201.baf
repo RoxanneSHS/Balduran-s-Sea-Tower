@@ -1,0 +1,19 @@
+IF
+  Global("OL_EEEE_KNHTS","%FirewineRuins%",0)
+THEN
+  RESPONSE #100
+
+    ActionOverride("KNIGHT1",DestroySelf())
+    ActionOverride("KNIGHT2",DestroySelf())
+    ActionOverride("KNIGHT3",DestroySelf())
+    ActionOverride("KNIGHT4",DestroySelf())
+    ActionOverride("KNIGHT5",DestroySelf())
+    ActionOverride("KNIGHT6",DestroySelf())
+    CreateCreature("OLKNHTG1",[602.984],S)
+    CreateCreature("OLKNHTG2",[731.984],S)
+    CreateCreature("OLKNHTG3",[563.1026],S)
+    CreateCreature("OLKNHTG4",[769.1008],S)
+    CreateCreature("OLKNHTG5",[536.1066],S)
+    CreateCreature("OLKNHTG6",[686.974],S)
+    SetGlobal("OL_EEEE_KNHTS","%FirewineRuins%",1)
+END

@@ -1,0 +1,324 @@
+BACKUP ~SeaTower/backup~
+AUTHOR ~Roxanne and Within Amnesia~
+
+VERSION ~V0.5~
+
+ALWAYS
+ ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+    INCLUDE ~SeaTower/lib/liam_bgee_vars.tpa~
+    END ELSE BEGIN
+    INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
+    END
+END
+
+
+AUTO_TRA ~SeaTower/translations/%s~
+LANGUAGE ~English~
+         ~English~
+         ~SeaTower/translations/setup.tra~
+
+BEGIN ~Balduran's Sea Tower Quests~
+
+COPY_EXISTING ~%BaldursGateDocks%.are~ ~override~
+  LPF fj_are_structure
+    INT_VAR
+    fj_type         = 2
+    fj_box_left     = 140
+    fj_box_top      = 3420
+    fj_box_right    = 270
+    fj_box_bottom   = 3455
+    fj_cursor_idx   = 34
+    fj_vertex_0     = 140 + (3420 << 16)
+    fj_vertex_1     = 270 + (3420 << 16)
+    fj_vertex_2     = 270 + (3455 << 16)
+    fj_vertex_3     = 140 + (3455 << 16)
+    fj_flags        = 4
+    STR_VAR
+    fj_structure_type   = region
+    fj_name             = Seatower
+    fj_destination_area = STO100
+    fj_destination_name = InSTO
+  END
+
+  LPF fj_are_structure
+    INT_VAR
+    fj_loc_x       = 225
+    fj_loc_y       = 3430
+    fj_orientation = 7
+    STR_VAR
+    fj_structure_type = entrance
+    fj_name           = exitsto100
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY ~SeaTower/Areas~ ~override~
+COPY ~SeaTower/Tis~ ~override~
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+COPY_EXISTING ~Sto100.ARE~ ~override~
+  WRITE_ASCII 0x2574 ~BG1200~
+  SAY 0x311c @129
+  SAY 0x31e0 @129
+END ELSE BEGIN
+COPY_EXISTING ~Sto100.ARE~ ~override~
+  SAY 0x311c @129
+  SAY 0x31e0 @129
+END
+
+COPY_EXISTING ~Sto102.ARE~ ~override~
+  SAY 0x638 @130
+
+COPY ~SeaTower/creatures/Stogrd1.cre~ ~override~
+	SAY 0x8 @124
+	SAY 0xC @124
+COPY ~SeaTower/creatures/Stogrd1.cre~ ~override/Stogrd2.cre~
+	SAY 0x8 @125
+        SAY 0xC @125
+        WRITE_ASCII 0x280 ~Stogrd2~
+        WRITE_ASCII 0x248 ~Stogrd2~
+        WRITE_ASCII 0x2cc ~Stogrd2~
+COPY_EXISTING ~fcook2.cre~ ~override~
+        WRITE_ASCII 0x280 ~fcook2~
+COPY ~SeaTower/creatures/Stomage1.cre~ ~override~
+SAY NAME1 @131
+SAY NAME2 @131
+COPY ~SeaTower/creatures/Stogrd1.cre~ ~override/Stogrd4.cre~
+	SAY 0x8 @132
+        SAY 0xC @132
+        WRITE_ASCII 0x280 ~Stogrd4~
+        WRITE_ASCII 0x248 ~Stogrd2~
+        WRITE_ASCII 0x2cc ~Stogrd4~
+COPY ~SeaTower/creatures/Stoselu.cre~ ~override~
+	SAY 0x8 @134
+	SAY 0xC @134
+COPY ~SeaTower/creatures/Stoscar.cre~ ~override~
+	SAY 0x8 @135
+	SAY 0xC @135
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+STRING_SET
+222230 @120
+222053 @119
+END ELSE BEGIN
+STRING_SET
+22230 @120
+22053 @119
+END
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+COPY_EXISTING ~Stoscar.cre~ ~override~
+  SAY INITIAL_MEETING #5166
+  SAY BATTLE_CRY1 #5167
+END ELSE BEGIN
+COPY_EXISTING ~Stoscar.cre~ ~override~
+  SAY INITIAL_MEETING #205166
+  SAY BATTLE_CRY1 #205167
+END
+
+ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 USING ~SeaTower/translations/OL_KnightJournal.tra~
+
+COPY_EXISTING ~Misc78.ITM~ ~override/Stopass.itm~
+        SAY NAME1 @122
+        SAY NAME2 @122
+	SAY 0x54 @123
+	
+COPY ~SeaTower/items/Stofake.ITM~ ~override~
+        SAY NAME1 @127
+        SAY NAME2 @127
+	SAY 0x54 @128
+
+COPY_EXISTING ~Kieres.dlg~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY ~"Misc1c"~ ~"Stopass"~
+END
+
+COPY_EXISTING ~Kieres.CRE~ ~override~
+REPLACE_CRE_ITEM ~stopass~ #0 #0 #0 ~NONE~ ~inv3~
+
+EXTEND_BOTTOM ~%NEBaldursGate_CountingHouse_L2_BCS%.BCS~ ~SeaTower/scripts/ar0308.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
+
+COMPILE 
+~SeaTower/dialogue/Sto_outside.D~ 
+~SeaTower/dialogue/Sto_library.D~
+~SeaTower/dialogue/Sto_shoptemple.d~
+~SeaTower/dialogue/Sto_Scarplot.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+
+COMPILE
+~SeaTower/scripts/STO100.baf~ 
+~SeaTower/scripts/STO102.baf~
+~SeaTower/scripts/STO104.baf~
+~SeaTower/scripts/Stogrd1.baf~
+~SeaTower/scripts/Stogrd2.baf~
+~SeaTower/scripts/StoCut1.baf~
+~SeaTower/scripts/StoChart.baf~
+~SeaTower/scripts/STO101.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+
+COPY ~SeaTower/stores/olselune.STO~ ~override~
+SAY 0xc @133
+
+
+
+BEGIN ~Ghost Knights at Ulcaster~
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COMPILE ~SeaTower/dialogue/OL_Knightquest.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+END ELSE BEGIN
+COMPILE ~SeaTower/dialogue/OL_Knightquest-EE.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+END
+
+ADD_JOURNAL @1001 @1002 USING ~SeaTower/translations/OL_KnightJournal.tra~
+
+COPY ~SeaTower/items/OLGHOSTR.ITM~ ~override~
+        SAY NAME1 ~Ring~
+        SAY NAME2 ~Ring~
+	SAY 0x54 @101
+
+COPY ~SeaTower/items/OLMISC82.ITM~ ~override~
+        SAY NAME1 @121
+        SAY NAME2 @121
+	SAY 0x54 @100
+
+COPY ~SeaTower/items/OLRING04.ITM~ ~override~
+        SAY NAME1 @101
+        SAY NAME2 @102
+	SAY 0x54 @103
+
+COPY ~SeaTower/items/OLRING04.BAM~ ~override~
+
+COPY ~SeaTower/items/OLHELM01.ITM~ ~override~
+        SAY NAME1 ~Helmet~
+        SAY NAME2 @104
+	SAY 0x54 @105
+
+COPY ~SeaTower/items/OLHELM01.BAM~ ~override~
+
+COPY ~SeaTower/items/OLPLAT25.ITM~ ~override~
+        SAY NAME1 @106
+        SAY NAME2 @106
+	SAY 0x54 @107
+
+COPY ~SeaTower/items/OLPLAT25.BAM~ ~override~
+
+COPY ~SeaTower/items/OLPLAT26.ITM~ ~override~
+        SAY NAME1 @106
+        SAY NAME2 @108
+	SAY 0x54 @109
+
+COPY ~SeaTower/items/OLPLAT26.BAM~ ~override~
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY ~SeaTower/creatures/OLKNHTG1.cre~ ~override~
+	SAY 0x8 @110
+	SAY 0xC @110
+	WRITE_ASCII 0x2cc ~KNIGHT~
+
+COPY ~SeaTower/creatures/OLKNHTG2.cre~ ~override~
+	SAY 0x8 @111
+	SAY 0xC @111
+	WRITE_ASCII 0x2cc ~KNIGHT~
+
+COPY ~SeaTower/creatures/OLKNHTG3.cre~ ~override~
+	SAY 0x8 @112
+	SAY 0xC @112
+	WRITE_ASCII 0x2cc ~KNIGHT~
+
+COPY ~SeaTower/creatures/OLKNHTG4.cre~ ~override~
+	SAY 0x8 @113
+	SAY 0xC @113
+	WRITE_ASCII 0x2cc ~KNIGHT~
+
+COPY ~SeaTower/creatures/OLKNHTG5.cre~ ~override~
+	SAY 0x8 @114
+	SAY 0xC @114
+	WRITE_ASCII 0x2cc ~KNIGHT~
+
+COPY ~SeaTower/creatures/OLKNHTG6.cre~ ~override~
+	SAY 0x8 @115
+	SAY 0xC @115
+	WRITE_ASCII 0x2cc ~KNIGHT~
+	
+END ELSE BEGIN
+COPY ~SeaTower/creatures/OLKNHTG1.cre~ ~override~
+	SAY 0x8 @110
+	SAY 0xC @110
+	WRITE_ASCII 0x2cc ~KNIGHT_~
+
+COPY ~SeaTower/creatures/OLKNHTG2.cre~ ~override~
+	SAY 0x8 @111
+	SAY 0xC @111
+	WRITE_ASCII 0x2cc ~KNIGHT_~
+
+COPY ~SeaTower/creatures/OLKNHTG3.cre~ ~override~
+	SAY 0x8 @112
+	SAY 0xC @112
+	WRITE_ASCII 0x2cc ~KNIGHT_~
+
+COPY ~SeaTower/creatures/OLKNHTG4.cre~ ~override~
+	SAY 0x8 @113
+	SAY 0xC @113
+	WRITE_ASCII 0x2cc ~KNIGHT_~
+
+COPY ~SeaTower/creatures/OLKNHTG5.cre~ ~override~
+	SAY 0x8 @114
+	SAY 0xC @114
+	WRITE_ASCII 0x2cc ~KNIGHT_~
+
+COPY ~SeaTower/creatures/OLKNHTG6.cre~ ~override~
+	SAY 0x8 @115
+	SAY 0xC @115
+	WRITE_ASCII 0x2cc ~KNIGHT_~
+END
+
+COPY ~SeaTower/creatures/OLKNHTU.cre~ override
+	SAY 0x8 @116
+	SAY 0xC @116
+	WRITE_ASCII 0x2cc ~KNIGHTSK~
+
+EXTEND_BOTTOM ~%FirewineRuins_BCS%.BCS~ ~SeaTower/scripts/OL5201.BAF~ EVALUATE_BUFFER
+
+COPY_EXISTING ~%FirewineRuins%.ARE~ ~override~
+	LPF ALTER_AREA_ACTOR STR_VAR
+           actor_name = Skeleton
+           cre_file = OLKNHTU
+        END
+BUT_ONLY
+
+
+BEGIN ~Hull's Sword extension~
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR2618.ARE~ ~override~
+  WRITE_ASCII 0x94 ~AR2618~ #8
+  BUT_ONLY
+END
+
+COPY ~SeaTower/items/OLSW1H12.ITM~ ~override~
+        SAY NAME1 @117
+        SAY NAME2 @117
+	SAY 0x54 @118
+
+COPY ~SeaTower/items/OLSW1H12.BAM~ ~override~
+
+EXTEND_BOTTOM ~%Candlekeep_PriestsQuarters_BCS%.BCS~ ~SeaTower/scripts/OL2602.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Candlekeep_Infirmary_BCS%.BCS~ ~SeaTower/scripts/OL2605.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Candlekeep_Bunkhouse_BCS%.BCS~ ~SeaTower/scripts/OL2607.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Candlekeep_Inn_L1_BCS%.BCS~ ~SeaTower/scripts/OL2616.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Candlekeep_Inn_L2_BCS%.BCS~ ~SeaTower/scripts/OL2617.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Candlekeep_Barracks_BCS%.BCS~ ~SeaTower/scripts/OL2618.BAF~ EVALUATE_BUFFER
+
+
+COPY_EXISTING ~Hull.dlg~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY ~"sw1h12"~ ~"olsw1h12"~
+REPLACE_TEXTUALLY ~FillSlot(SLOT_WEAPON1)~ ~~
+REPLACE_TEXTUALLY ~EquipMostDamagingMelee()~ ~~
+END
+
+COMPILE ~SeaTower/dialogue/OL_Hull.d~
+
+COPY ~SeaTower/stores/OLTM2601.STO~ ~override~
+
+COPY_EXISTING ~POGHM5.dlg~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY ~"tem2601"~ ~"oltm2601"~
+END

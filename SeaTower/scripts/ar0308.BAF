@@ -1,0 +1,8 @@
+IF
+Global("Towernotice","%NEBaldursGate_CountingHouse_L2%",0)
+PartyHasItem("Stopass")
+THEN
+RESPONSE #100
+SetGlobal("Towernotice","%NEBaldursGate_CountingHouse_L2%",1)
+AddJournalEntry(@1003,QUEST)
+END

@@ -1,0 +1,17 @@
+IF
+Clicked([ANYONE])
+Contains("MISC1C",Myself)
+Range("Stogrd2",30)
+THEN
+RESPONSE #100
+DisplayString(LastTrigger,@126) 
+END
+
+IF
+Clicked([ANYONE])
+Contains("MISC1C",Myself)
+!Range("Stogrd2",30)
+THEN
+RESPONSE #100
+Unlock("SeaCharts") 
+END

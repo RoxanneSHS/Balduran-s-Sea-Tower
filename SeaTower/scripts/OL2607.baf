@@ -1,0 +1,7 @@
+IF
+  Global("OL_Assassin_Bunkhouse","%Candlekeep_Bunkhouse%",0)
+THEN
+  RESPONSE #100
+    ActionOverride("Container1",CreateItem("SCRL72",0,0,0))
+    SetGlobal("OL_Assassin_Bunkhouse","%Candlekeep_Bunkhouse%",1)
+END
