@@ -97,6 +97,12 @@ COPY ~SeaTower/creatures/Stoscar.cre~ ~override~
 COPY ~SeaTower/creatures/Stobill.cre~ ~override~
 	SAY 0x8 @136
 	SAY 0xC @136
+COPY ~SeaTower/creatures/Stoflund.cre~ ~override~
+	SAY 0x8 @137
+	SAY 0xC @137
+COPY ~SeaTower/creatures/Stotronk.cre~ ~override~
+	SAY 0x8 @138
+	SAY 0xC @138
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
@@ -129,6 +135,14 @@ COPY ~SeaTower/items/Stofake.ITM~ ~override~
         SAY NAME1 @127
         SAY NAME2 @127
 	SAY 0x54 @128
+COPY ~SeaTower/items/stoscale.ITM~ ~override~
+        SAY NAME1 @139
+        SAY NAME2 @139
+	SAY 0x54 @140
+COPY ~SeaTower/items/stobrarm.ITM~ ~override~
+        SAY NAME1 @141
+        SAY NAME2 @141
+	SAY 0x54 @142
 
 COPY_EXISTING ~Kieres.dlg~ ~override~
 DECOMPILE_AND_PATCH BEGIN
@@ -158,6 +172,8 @@ COMPILE
 
 COPY ~SeaTower/stores/olselune.STO~ ~override~
 SAY 0xc @133
+COPY ~SeaTower/stores/olblksmt.sto~ ~override~
+SAY 0xc @138
 
 
 

@@ -86,3 +86,22 @@ Weight: 3~
 @134 = ~Priestess of Selune~
 @135 = ~Scar~
 @136 = ~Bill~
+@137 = ~Flunder~
+@138 = ~Tronk~
+@139 = ~Brown Dragon Scales~
+@140 = ~These are some sea weed covered scales from a brown dragon. Legend has it they can be forged into an enchanted armour.
+
+STATISTICS:
+
+Weight: 15~
+@141 = ~Skull Dragon Chain~
+@142 = ~This armor uses scales of a brown dragon bound to a chain backing by means of a magical fire. The resulting armour is ash-gray in colour and more flexible than standard splint mail. 
+
+STATISTICS:
+
+Armor Class: 2 (0 vs. crushing, 1 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 18
+Miscast Arcane Magic: +25%~
