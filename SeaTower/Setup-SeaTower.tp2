@@ -94,6 +94,9 @@ COPY ~SeaTower/creatures/Stoselu.cre~ ~override~
 COPY ~SeaTower/creatures/Stoscar.cre~ ~override~
 	SAY 0x8 @135
 	SAY 0xC @135
+COPY ~SeaTower/creatures/Stobill.cre~ ~override~
+	SAY 0x8 @136
+	SAY 0xC @136
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET

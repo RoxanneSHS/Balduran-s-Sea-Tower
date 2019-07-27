@@ -1,4 +1,5 @@
 BEGIN Stomage1
+BEGIN StoBill
 
 CHAIN
 IF WEIGHT #-8~Global("ScarMission","GLOBAL",5) Global("STO_ScarDoppel","Global",0)~THEN Scar Start1
@@ -76,3 +77,14 @@ CHAIN
 IF~AreaCheck("Sto103")~ THEN StoScar Trap103
 ~Is that how you do your duties, traitor. You come too late, much too late!~
 DO~AddJournalEntry(@1007,QUEST) Wait(1) ApplySpell(Myself,DOPPLEGANGER_CHANGE4)~ EXIT
+
+CHAIN
+IF~AreaCheck("Sto201")~THEN StoBill Invite1
+~Greetings, peasants, well then, I'll need to see your invitations.~
+END
+++~Invitations to what?~ + Invite2
+++~I have the Duke's pass here.~ + Invite2
+
+CHAIN
+IF~~THEN StoBill Invite2
+~Don't be so impatient! Let's take a look at these invitations. Invitations! Sssss...~DO~ApplySpell(Myself,DOPPLEGANGER_CHANGE4)~ EXIT
