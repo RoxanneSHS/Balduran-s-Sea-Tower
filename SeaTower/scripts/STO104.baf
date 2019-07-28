@@ -67,3 +67,12 @@ SetGlobal("StoOtherWay","Sto104",3)
 TriggerActivation("OutCellar",FALSE)
 TriggerActivation("OutTower",FALSE)
 END
+
+IF
+Global("StoGotPass","GLOBAL",2)
+Global("StoRightWay","Sto104",0)
+THEN
+RESPONSE #100
+SetGlobal("StoRightWay","Sto104",1)
+CreateCreature("Icmyc01",[843.807],6)
+END

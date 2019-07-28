@@ -11,7 +11,7 @@ CHAIN
 IF~~ THEN Stoflund TalkBrown2
 ~Hey, I'm not telling you any tales, <PRO_MANWOMAN>. You look like adventurers the way you're geared up. You must have heard stranger tales than I tell you now and maybe faced stronger challenges.~
 =~SHE isn't fiction, she's real.~
-=~I', talking about a dragon, you hear me?~
+=~I'm talking about a dragon, you hear me?~
 END
 ++~A dragon in a dungeon below an old castle? Have I heard such a thing before?~+ TalkBrown3
 ++~Now you got me interested, fisher man.~ + TalkBrown3
@@ -38,6 +38,6 @@ END
 
 CHAIN
 IF~~ THEN Stoflund TalkBrown5
-~Deal with it as you like, <PRO_SIRMAAM>, I'd prefer some peaceful end. I can live with her and she share she takes from the fish and shells just like me. I can't live with her moaning and knowing she suffers.~
+~Deal with it as you like, <PRO_SIRMAAM>, I'd prefer some peaceful end. I can live with her and what share she takes from the fish and shells just like me. I can't live with her moaning and knowing she suffers.~
 =~I'll be at my house over there in the east outside the tower walls.~
 DO~AddJournalEntry(@1008,QUEST) Wait(1) MoveToPointNoInterrupt([4473.2148])~ EXIT
