@@ -124,7 +124,7 @@ COPY_EXISTING ~Stoscar.cre~ ~override~
   SAY BATTLE_CRY1 #205167
 END
 
-ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 USING ~SeaTower/translations/OL_KnightJournal.tra~
+ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 USING ~SeaTower/translations/OL_KnightJournal.tra~
 
 COPY_EXISTING ~Misc78.ITM~ ~override/Stopass.itm~
         SAY NAME1 @122
@@ -159,6 +159,7 @@ COMPILE
 ~SeaTower/dialogue/Sto_library.D~
 ~SeaTower/dialogue/Sto_shoptemple.d~
 ~SeaTower/dialogue/Sto_Scarplot.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+COMPILE~SeaTower/dialogue/Sto_Brown.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 
 COMPILE
 ~SeaTower/scripts/STO100.baf~ 

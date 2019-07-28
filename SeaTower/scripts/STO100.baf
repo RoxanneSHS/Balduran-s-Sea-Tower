@@ -26,3 +26,11 @@ CreateCreature("Stogrd1",[3661.2793],3)
 CreateCreature("Stogrd1",[3729.2661],2)
 END
 
+IF
+Global("StoGotPass","GLOBAL",2)
+Global("StoRightWay","Sto100",0)
+THEN
+RESPONSE #100
+SetGlobal("StoRightWay","Sto100",1)
+CreateCreature("Stoflund",[3412.3086],5)
+END

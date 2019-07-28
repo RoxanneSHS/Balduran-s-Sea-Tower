@@ -51,7 +51,7 @@ IF ~~ THEN Stotronk RoutineTronk2
 
 CHAIN
 IF ~~ THEN Stotronk Tronkscales1
-~Oh, brown dragon scales, is it? I could attempt to make a scale armour from them. It will cost you a mere 5,000 gp.~
+~Oh, black dragon scales, is it? I could attempt to make a scale armour from them. It will cost you a mere 5,000 gp.~
 END
 IF~PartyGoldLT(5000)~THEN REPLY~I don't have that much gold.~ + Tronkscales3
 IF~PartyGoldGT(4999)~THEN REPLY~Sure, go ahead.~DO~SetGlobal("Stoscales","Locals",2)TakePartyGold(5000) TakePartyItem("Stoscale") DestroyItem("Stoscale") ActionOverride("Stotronk",Face(6))~+ Tronkscales2

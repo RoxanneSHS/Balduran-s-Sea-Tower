@@ -13,7 +13,7 @@ END
 CHAIN
 IF~~THEN Scar Start2
 ~I can't yet put my fingers on it but it would be more than sheer coincidence if their appearances have nothing to do with our other problems.~
-=~Here are some details me and those loyal to me have come across lately. There is some increase activities between the old Sea Tower of Balduran, the hero of this town, and the Iron Throne building. Especially at night. Some of my men swear they have seen people that should have been elsewhere at that time.~
+=~Here are some details me and those loyal to me have come across lately. There is some increase in activities between the old Sea Tower of Balduran, the hero of this town, and the Iron Throne building. Especially at night. Some of my men swear they have seen people that should have been elsewhere at that time.~
 END
 ++~Doppelgangers?~ + Start3
 IF~GlobalGT("StoGotPass","GLOBAL",0)~THEN REPLY~I know where that tower is.~ + Start3
