@@ -1,5 +1,6 @@
 BEGIN Stomage1
 BEGIN StoBill
+BEGIN StoLiia
 
 CHAIN
 IF WEIGHT #-8~Global("ScarMission","GLOBAL",5) Global("STO_ScarDoppel","Global",0)~THEN Scar Start1
@@ -71,7 +72,7 @@ CHAIN
 IF~~THEN Stomage1 Secret5
 ~It makes no sense to die down here for Sarevok. If Scar's still alive and knows about the Sea Tower he'll send more to investigate even if I could kill you.~
 DO~AddJournalEntry(@1006,QUEST)~
-=~Do what you want but be warned, your death waits for you if you move on.~DO~EscapeAreaDestroy(20)~EXIT
+=~Do what you want but be warned, your death waits for you if you move on.~DO~		MoveToPointNoInterrupt([600.502]) EscapeAreaDestroy(20)~EXIT
 
 CHAIN
 IF~AreaCheck("Sto103")~ THEN StoScar Trap103

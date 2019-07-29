@@ -1,0 +1,25 @@
+IF
+Global("StoRightWay","Sto202",0)
+THEN
+RESPONSE #100
+SetGlobal("StoRightWay","Sto202",1)
+TriggerActivation("Winski",FALSE)
+END
+
+IF
+Global("STO_ScarDoppel","Global",6)
+Global("StoRightWay","Sto202",1)
+THEN
+RESPONSE #100
+SetGlobal("StoRightWay","Sto202",2)
+TriggerActivation("Winski",TRUE)
+AddJournalEntry(@1009,QUEST)
+END
+
+IF
+Global("StoRightWay","Sto202",2)
+THEN
+RESPONSE #100
+SetGlobal("StoRightWay","Sto202",3)
+CreateCreature("StoFlay1",[542.580],13)
+END

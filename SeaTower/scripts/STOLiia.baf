@@ -1,0 +1,43 @@
+IF
+Range([PC],20)
+Global("STO_ScarDoppel","Global",2)
+CombatCounter(0)
+THEN
+RESPONSE #100
+StartDialog("stoliia",[PC])
+END
+
+IF
+Range([PC],15)
+Global("STO_ScarDoppel","Global",3)
+PartyHasItem("StoCell")
+THEN
+RESPONSE #100
+StartDialog("stoliia",[PC])
+END
+
+IF
+Global("STO_ScarDoppel","Global",4)
+THEN
+RESPONSE #100
+SetGlobal("STO_ScarDoppel","Global",5)
+JumpToPoint([1190.377])
+END
+
+IF
+Global("STO_ScarDoppel","Global",5)
+THEN
+RESPONSE #100
+Wait(1)
+StartDialog("stoliia",[PC])
+END
+
+IF
+Global("STO_ScarDoppel","Global",6)
+Global("Getout202","Sto202",0)
+THEN
+RESPONSE #100
+SetGlobal("Getout202","Sto202",1)
+MoveToPointNoInterrupt([2040.702])
+EscapeArea()
+END
