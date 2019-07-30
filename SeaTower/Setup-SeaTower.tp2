@@ -82,6 +82,9 @@ COPY_EXISTING ~fcook2.cre~ ~override~
 COPY ~SeaTower/creatures/Stomage1.cre~ ~override~
 SAY NAME1 @131
 SAY NAME2 @131
+COPY ~SeaTower/creatures/Stomage2.cre~ ~override~
+SAY NAME1 @147
+SAY NAME2 @147
 COPY ~SeaTower/creatures/Stogrd1.cre~ ~override/Stogrd4.cre~
 	SAY 0x8 @132
         SAY 0xC @132
