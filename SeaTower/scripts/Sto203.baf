@@ -1,0 +1,10 @@
+IF
+Global("STO_ScarDoppel","Global",7)
+THEN
+RESPONSE #100
+SetGlobal("STO_ScarDoppel","Global",8)
+CreateCreature("bdimp",[396.460],13) 
+CreateCreature("bdabired",[853.446],2) 
+CreateCreature("bderinye",[797.745],2) 
+CreateCreature("bdbonefi",[428.410],0)  
+END
