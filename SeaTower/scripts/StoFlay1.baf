@@ -1,0 +1,20 @@
+IF
+Global("StoRightWay","Sto202",3)
+Range([PC],15)
+THEN
+RESPONSE #100
+SetGlobal("StoRightWay","Sto202",4)
+DisplayStringWait(Myself,@150)
+MoveBetweenAreas("Sto203",[723.612],4)
+END
+
+IF
+AreaCheck("Sto203")
+Range([PC],10)
+See([PC])
+THEN
+RESPONSE #100
+DisplayStringWait(Myself,@149)
+Wait(3)
+ReallyForceSpell(Myself,DRYAD_TELEPORT)
+END

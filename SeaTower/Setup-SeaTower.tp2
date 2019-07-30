@@ -112,6 +112,9 @@ COPY ~SeaTower/creatures/StoLiia.cre~ ~override~
 COPY ~SeaTower/creatures/StoFlay1.cre~ ~override~
 	SAY 0x8 @146
 	SAY 0xC @146
+COPY ~SeaTower/creatures/StoWinsk.cre~ ~override~
+	SAY 0x8 @148
+	SAY 0xC @148
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
@@ -139,7 +142,6 @@ COPY_EXISTING ~Misc78.ITM~ ~override/Stopass.itm~
         SAY NAME1 @122
         SAY NAME2 @122
 	SAY 0x54 @123
-	
 COPY ~SeaTower/items/Stofake.ITM~ ~override~
         SAY NAME1 @127
         SAY NAME2 @127
@@ -152,11 +154,18 @@ COPY ~SeaTower/items/stobrarm.ITM~ ~override~
         SAY NAME1 @141
         SAY NAME2 @141
 	SAY 0x54 @142
-
 COPY_EXISTING ~bdkey12.ITM~ ~override/Stocell.itm~
         SAY NAME1 @144
         SAY NAME2 @144
 	SAY 0x54 @145
+COPY ~SeaTower/items/Stokey1.ITM~ ~override~
+        SAY NAME1 @151
+        SAY NAME2 @151
+	SAY 0x54 @152
+COPY_EXISTING ~bdmisc42.ITM~ ~override/StoSoDH.itm~
+        SAY NAME1 @153
+        SAY NAME2 @153
+	SAY 0x54 @154
 
 COPY_EXISTING ~Kieres.dlg~ ~override~
 DECOMPILE_AND_PATCH BEGIN
@@ -185,6 +194,7 @@ COMPILE
 ~SeaTower/scripts/StoCut1.baf~
 ~SeaTower/scripts/StoChart.baf~
 ~SeaTower/scripts/StoLiia.baf~
+~SeaTower/scripts/StoFlay1.baf~
 ~SeaTower/scripts/STO101.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 COMPILE~SeaTower/scripts/STO202.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 

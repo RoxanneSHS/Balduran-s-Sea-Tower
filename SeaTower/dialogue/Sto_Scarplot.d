@@ -1,6 +1,7 @@
 BEGIN Stomage1
 BEGIN StoBill
 BEGIN StoLiia
+BEGIN StoWinsk
 
 CHAIN
 IF WEIGHT #-8~Global("ScarMission","GLOBAL",5) Global("STO_ScarDoppel","Global",0)~THEN Scar Start1
@@ -89,3 +90,33 @@ END
 CHAIN
 IF~~THEN StoBill Invite2
 ~Don't be so impatient! Let's take a look at these invitations. Invitations! Sssss...~DO~ApplySpell(Myself,DOPPLEGANGER_CHANGE4)~ EXIT
+
+CHAIN
+IF~Global("STO_ScarDoppel","Global",6)~THEN StoWinsk Again1
+~All that disturbance outside, that was you. Again.~
+DO~SetGlobal("STO_ScarDoppel","Global",7)~
+==Stowinsk IF~GlobalLT("X#DYJWADM","GLOBAL",2) GlobalLT("SanOrDiId","GLOBAL",5)~THEN~ This is just one time too many that you cross our schemes - <CHARNAME>. Yes, I know who you are.~
+==Stowinsk IF~OR(2)GlobalGT("X#DYJWADM","GLOBAL",1)GlobalGT("SanOrDiId","GLOBAL",4)~THEN~So we meet again, <CHARNAME>. This is just one time too many that you cross our schemes.~
+END
+++~I was expecting someone else here, Othlor, the bhaalspawn Sarevok. What is your role in this.?~+ Again2
+++~I crossed the schemes of the Iron Throne and Sarevok a number of times and do it here once again.~+ Again2
+IF~OR(2)GlobalGT("X#DYJWADM","GLOBAL",1)GlobalGT("SanOrDiId","GLOBAL",4)~THEN REPLY~Winski Perorate, I was expecting to see you again under unpleasant circumstances.~+ Again2
+
+CHAIN
+IF~~THEN StoWinsk Again2
+~What is my role? I am Sarevok's mentor and tutored him in the blackest of rituals. Why do I reveal this to you? Because you will not leave here to tell anyone. You will not stop the rising god of murder.~
+DO~AddJournalEntry(@1010,QUEST)~
+==Stowinsk IF~InParty("Dynaheir")~THEN~So, you have come for me, witch.~
+==DynahJ IF~InParty("Dynaheir")~THEN~I did not come for thee, Winski Perorate. I came from Rashemen to find the Bhaalspawn Sarevok of whom I heard in Sembia... And of late my labor has become helping <CHARNAME> to stop Sarevok Anchev's war. Thou hast never been my task.~
+==Stowinsk IF~InParty("Dynaheir")~THEN~Do not lie! The Othlors... the Hathrans... they were looking for me ever since I... fled Rashemen. They did not think much of me to send one puny Wychlaran. Rashemen may have driven me into the shadows, but I will have my revenge.~
+==DynahJ IF~InParty("Dynaheir")~THEN~Dost not threaten us, Winski. No good will come out of it.~
+END
+++~These doppelgangers are under your control?~ + Again3
+++~You don't stop at an alliance with doppelgangers, you even work with mind flayers!~ + Again3
+
+CHAIN
+IF~~THEN StoWinsk Again3
+~Sarevok needs me, he may have forgotten it now that his powers have grown. But he is nothing without me. These doppelgangers lack own initiative and focus but follow the lead of a powerful mage who knows how to handle them.~
+=~You're just a fool and you come too late. You maybe can close down this installation but the damage is already unreversibly done. I will not waste more time with you.~
+=~*Snaps his fingers*.~
+=~Here, creatures, kill that fool for your master.~ DO~ReallyForceSpell(Myself,DRYAD_TELEPORT)~EXIT

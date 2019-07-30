@@ -32,7 +32,7 @@ IF~InParty("Rasaad")~THEN REPLY~Rassaad yn Bashir here is a sun soul monk. We'd 
 IF~!InParty("Rasaad")~THEN REPLY~No, but we're questers and seekers and may have use for what services you have to provide.~DO ~StartStore("olselune",LastTalkedToBy(Myself)) ~ EXIT
 
 CHAIN
-IF ~Global("Stoscales","Locals",2)~ THEN Stotronk Tronkscales11
+IF ~Global("Stoscales","Locals",2)~ THEN Stotronk Tronkscales21
 ~Not too bad, given that one can hardly practice with that material beforehand.~
 =~May it serve you well.~DO~SetGlobal("Stoscales","Locals",3) GiveItemCreate("stobrarm",Player1,0,0,0)~EXIT
 
