@@ -24,7 +24,7 @@ IF~~THEN StoLiia Help4
 END
 ++~Don't go away, I'll be right back.~DO~SetGlobal("STO_ScarDoppel","Global",3)~EXIT
 IF~PartyHasItem("StoCell")~ THEN REPLY~I think I have that key already.~+ Help6
-++~I will consider it.~EXIT
+++~I will consider it.~DO~SetGlobal("STO_ScarDoppel","Global",3)~EXIT
 
 CHAIN
 IF~Global("STO_ScarDoppel","Global",3) PartyHasItem("StoCell")~ THEN StoLiia Help5
@@ -62,4 +62,6 @@ CHAIN
 IF~~THEN StoLiia Imoen3
 ~I see. Well, there will be other means to keep the promise I gave to Winthrop and Gorion back then.~ EXTERN StoLiia Imoen2
 
-
+I_C_T Liia 2 StoLiiaPalace
+==Liia IF~GlobalGT("STO_ScarDoppel","Global",6)~THEN~I have been recently freed from the confinement by doppelgangers. Someone uses such creatures to mislead us. The person who freed me can witness my statement, <PRO_HESHE> is here today to give us details...~
+END

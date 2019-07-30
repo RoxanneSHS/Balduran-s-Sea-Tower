@@ -44,6 +44,45 @@ IF~~THEN Scar Start5
 ~I have such a pass for you, <CHARNAME>. You just need to show it at the gate to the tower. You'll find the entrance in the south west of the Water Queen's House in the harbour. Just follow the catwalk beside the city wall.~DO~SetGlobal("STO_ScarDoppel","Global",2) GiveItemCreate("stopass",Player1,0,0,0) AddJournalEntry(@1004,QUEST)~EXIT
 
 CHAIN
+IF WEIGHT #-8~Global("ScarMission","GLOBAL",5) Global("STO_ScarDoppel","Global",8)~THEN Scar Result1
+~You're back, <CHARNAME>. Did you find out something at the Sea Tower?~
+DO~SetGlobal("STO_ScarDoppel","Global",9)~
+END
+++~We found evidence that the doppelgangers came from there. An Othlor named Winski headed the operation on behalf of Sarevok.~+ Result2
+++~We closed down the supply of doppelgangers but the guy who was in charge, the mage Winski, could escape.~ + Result2
+
+CHAIN
+IF~~ THEN Scar Result2
+~Winski Perorate, I should have known! That is a direct link to Sarevok and bad news in deed.~
+=~Winski is an expatriate of Rashemen, a mage said to know all dark and evil magic you can think of. I have long already auspected him to train and condition Sarevok to be used as a weapon of revenge against the witches who drove him from his home land.~
+END
+++~I gained the impression that such might have been Winski's original plan but Sarevok meanwhile is using the Othlor to do his bidding.~ + Result3
+++~He's a loser twice. We stopped his doppelganger project and Sarevok has long overpowered his former tutor.~ + Result3
+
+CHAIN
+IF~~ THEN Scar Result3
+~I hope your success gives us the time we need to act and prepare, <CHARNAME>.~
+DO~AddexperienceParty(9000)~
+END
+++~There is one thing you need to know, there was a doppelganger of yourself that we had to eliminate.~ + Result4
+++~One more detail, Scar, that Winski claimed that we came too late. Maybe he has educated enough of the shapeshifters to fulfil his needs.~ + Result5
+++~I freed Duke Jannath before a clone of her was ready to replace her.~ + Result5
+
+CHAIN
+IF~~ THEN Scar Result5
+~I heard what Liia had to say after her rescue and that there even was a double of me. There may be others already in high position that we don't know about yet.~
+EXTERN Scar Result7
+
+CHAIN
+IF~~ THEN Scar Result4
+~This is quite alarming. Add to this what Duke Liia Jannath told me about her rescue.~
+EXTERN Scar Result7
+
+CHAIN
+IF~~ THEN Scar Result7
+~Anyway, you have done much for our town already and I'm thankful for it. There are preparations to be made but you have solved at least the problem at the Sea Tower. Come back in an hour and I will make arrangements meanwhile to have you meet Duke Eltan.~DO~EraseJournalEntry(@1004) EraseJournalEntry(@1005) EraseJournalEntry(@1006) EraseJournalEntry(@1007) EraseJournalEntry(@1009) EraseJournalEntry(@1010)~  EXIT
+
+CHAIN
 IF~Global("Arealook","Sto102",1)~THEN Stomage1 Secret1
 ~You are not supposed to be down here and I assume you know it.~
 END

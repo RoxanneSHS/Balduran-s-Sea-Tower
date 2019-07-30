@@ -8,7 +8,7 @@ END
 
 IF
 GlobalLT("Arealook","Sto102",9)
-GlobalLT("STO_ScarDoppel","Global",10)
+GlobalLT("STO_ScarDoppel","Global",3)
 OR(3)
 GlobalGT("Chapter","Global",7)
 Dead("Sarevok")
