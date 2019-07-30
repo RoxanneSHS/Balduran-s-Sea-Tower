@@ -42,8 +42,9 @@ IF ~!Global("Stoscales","Locals",2)~ THEN Stotronk RoutineTronk
 END
 ++~No need to trouble yourself, I'm just browsing about your smithy. I have heard much about it.~ + RoutineTronk2
 ++~Could you show us what you have for sale?~DO~ StartStore("olblksmt",LastTalkedToBy(Myself))~EXIT
-IF~PartyHasItem("Stoscale")~THEN REPLY~Can you use these dragon scales for a purpose?~ + Tronkscales1
+IF~Global("StoEmporiumExists","Global",0)PartyHasItem("Stoscale")~THEN REPLY~Can you use these dragon scales for a purpose?~ + Tronkscales1
 ++~Nothing, thanks. I was just leaving.~+ RoutineTronk2
+IF~Global("StoEmporiumExists","Global",1)PartyHasItem("Stoscale")~THEN REPLY~Can you use these dragon scales for a purpose?~ + Tronkscales11
 
 CHAIN
 IF ~~ THEN Stotronk RoutineTronk2
@@ -57,6 +58,12 @@ IF~PartyGoldLT(5000)~THEN REPLY~I don't have that much gold.~ + Tronkscales3
 IF~PartyGoldGT(4999)~THEN REPLY~Sure, go ahead.~DO~SetGlobal("Stoscales","Locals",2)TakePartyGold(5000) TakePartyItem("Stoscale") DestroyItem("Stoscale") ActionOverride("Stotronk",Face(6))~+ Tronkscales2
 ++~I have no interest in it for the moment.~+ Tronkscales3
 
+CHAIN
+IF ~~ THEN Stotronk Tronkscales11
+~I could but maybe you should consider bringing them to the Armour Emporium. They ask their price for sure but can provide better ware than humble Tronk.~
+END
+++~Tell me what you can do with them so that I may decide.~+ Tronkscales1
+++~Thanks for the advice. I will check their offer and maybe come back if it's not worth it.~ + Tronkscales3
 
 CHAIN
 IF ~~ THEN Stotronk Tronkscales2
