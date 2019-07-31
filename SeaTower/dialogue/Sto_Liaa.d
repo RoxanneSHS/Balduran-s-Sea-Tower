@@ -63,5 +63,5 @@ IF~~THEN StoLiia Imoen3
 ~I see. Well, there will be other means to keep the promise I gave to Winthrop and Gorion back then.~ EXTERN StoLiia Imoen2
 
 I_C_T Liia 2 StoLiiaPalace
-==Liia IF~GlobalGT("STO_ScarDoppel","Global",6)~THEN~I have been recently freed from the confinement by doppelgangers. Someone uses such creatures to mislead us. The person who freed me can witness my statement, <PRO_HESHE> is here today to give us details...~
+==Liia IF~GlobalGT("STO_ScarDoppel","Global",6) GlobalLT("STO_ScarDoppel","Global",12)~THEN~I have been recently freed from the confinement by doppelgangers. Someone uses such creatures to mislead us. The person who freed me can witness my statement, <PRO_HESHE> is here today to give us details...~
 END

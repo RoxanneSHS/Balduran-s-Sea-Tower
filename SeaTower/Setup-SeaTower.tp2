@@ -68,6 +68,20 @@ END
 COPY_EXISTING ~Sto102.ARE~ ~override~
   SAY 0x638 @130
 
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~ar2011.ARE~ ~override/Sto109.are~
+   WRITE_ASCII 0x264 Sto100
+   WRITE_ASCII 0x26c Out109 #8
+   WRITE_ASCII 0x2f0 ~In109~ #8
+   WRITE_ASCII 0x19c ~Cat~ #8
+END ELSE BEGIN
+COPY_EXISTING ~bg2011.ARE~ ~override/Sto109.are~
+   WRITE_ASCII 0x264 Sto100
+   WRITE_ASCII 0x26c Out109 #8
+   WRITE_ASCII 0x2f0 ~In109~ #8
+   WRITE_ASCII 0x19c ~Cat~ #8
+END
+
 COPY ~SeaTower/creatures/Stogrd1.cre~ ~override~
 	SAY 0x8 @124
 	SAY 0xC @124

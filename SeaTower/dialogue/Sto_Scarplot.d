@@ -80,7 +80,19 @@ EXTERN Scar Result7
 
 CHAIN
 IF~~ THEN Scar Result7
-~Anyway, you have done much for our town already and I'm thankful for it. There are preparations to be made but you have solved at least the problem at the Sea Tower. Come back in an hour and I will make arrangements meanwhile to have you meet Duke Eltan.~DO~EraseJournalEntry(@1004) EraseJournalEntry(@1005) EraseJournalEntry(@1006) EraseJournalEntry(@1007) EraseJournalEntry(@1009) EraseJournalEntry(@1010)~  EXIT
+~Anyway, you have done much for our town already and I'm thankful for it. There are preparations to be made but you have solved at least the problem at the Sea Tower. Come back in an hour and I will make arrangements meanwhile to have you meet Duke Eltan.~DO~EraseJournalEntry(@1004) EraseJournalEntry(@1006) EraseJournalEntry(@1007) EraseJournalEntry(@1009) EraseJournalEntry(@1010)~  EXIT
+
+CHAIN
+IF WEIGHT #-8~Global("ScarMission","GLOBAL",5) Global("STO_ScarDoppel","Global",12)~THEN Scar Result12
+~You're back, <CHARNAME>. Did you find out something at the Sea Tower?~
+DO~SetGlobal("STO_ScarDoppel","Global",13)~
+END
+++~We found some hints and a mage guarding the entrance to hidden tunnels. We killed him and the tunnels are blocked. We found nothing else.~ + Result13
+++~I have to admit that probably we failed the mission. The mage that had access to a hidden dungeon attacked us and we had to kill him. Now the entrance is blocked.~ + Result13
+
+CHAIN
+IF~~THEN Scar Result13
+~It can't be helped. At least you tried it, with these opponents it's proven hard to nail them down.~DO~EraseJournalEntry(@1004) EraseJournalEntry(@1005) ~EXTERN Scar NoStart
 
 CHAIN
 IF~Global("Arealook","Sto102",1)~THEN Stomage1 Secret1
