@@ -10,7 +10,6 @@ END
 
 IF
 AreaCheck("Sto203")
-Range([PC],10)
 See([PC])
 THEN
 RESPONSE #100
