@@ -22,7 +22,7 @@ CHAIN
 IF~~ THEN Stoflund TalkBrown3
 ~On your journeys you might have heard of skull dragons, some call them black dragons as well.~
 ==BDCorwiJ IF~InParty("Corwin")~THEN~There were some reports about one having been spotted at the mouth of River Chionthar a few tendays ago, <CHARNAME>, there may be truth in this man's words.~
-==Stoflund~These dragons are aquatic creatures that live in sea and swamps and they feed on fish, shellfish and a tad of red meat from terrestrial creatures. And there was one at the mouth of River Chionthar a while ago.~
+==Stoflund IF~!InParty("CVSandr")~THEN~These dragons are aquatic creatures that live in sea and swamps and they feed on fish, shellfish and a tad of red meat from terrestrial creatures. And there was one at the mouth of River Chionthar a while ago.~
 END
 ++~Be that as it may, what does it have to do with us?~ + TalkBrown4
 ++~Why does that interest you at all?~ + TalkBrown4
