@@ -76,3 +76,15 @@ RESPONSE #100
 SetGlobal("StoRightWay","Sto104",1)
 CreateCreature("Icmyc01",[843.807],6)
 END
+
+IF
+Global("STO_ScarDoppel","Global",8)
+Global("StoBackWay","Sto104",0)
+THEN
+RESPONSE #100
+SetGlobal("StoBackWay","Sto104",1)
+CreateCreature("StoHarr",[1558.379],10)
+CreateCreature("Gorf",[1535.460],12)
+CreateCreature("Carsto",[1389.357],14)
+CreateCreature("dopple",[1296.440],11)
+END

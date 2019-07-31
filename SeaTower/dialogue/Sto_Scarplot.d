@@ -31,7 +31,7 @@ CHAIN
 IF~~THEN Scar Start3
 ~Balduran's Sea Tower is off limits for the public. You need a pass from the Dukes to be admitted. Several Iron Throne members are influential enough to have such passes. I still hope that I'm wrong but it's better to have someone not known as Flaming Fist to look into whatever goes on there.~
 END
-++~I have such a pass already from another mission.~ + Start4
+IF~PartyHasItem("stopass")~THEN REPLY~I have such a pass already from another mission.~ + Start4
 ++~No more errands, Scar. I want to see your superiors now.~ + NoStart
 ++~Where would I get such a pass, do I get to see the Dukes now?~  + Start5
 
@@ -171,3 +171,8 @@ IF~~THEN StoWinsk Again3
 =~You're just a fool and you come too late. You maybe can close down this installation but the damage is already unreversibly done. I will not waste more time with you.~
 =~*Snaps his fingers*.~
 =~Here, creatures, kill that fool for your master.~ DO~ReallyForceSpell(Myself,DRYAD_TELEPORT)~EXIT
+
+CHAIN
+IF WEIGHT #-2~Global("StoBackWay","Sto104",1)~THEN Rahvin Backway
+~So that coward Garrigle was right, here we have the intruders!~
+DO~ActionOverride("GORF",Enemy()) ActionOverride("CARSTON",Enemy()) Enemy()~EXIT

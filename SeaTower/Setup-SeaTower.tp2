@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V0.2~
+VERSION ~V0.3~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -129,6 +129,9 @@ COPY ~SeaTower/creatures/StoFlay1.cre~ ~override~
 COPY ~SeaTower/creatures/StoWinsk.cre~ ~override~
 	SAY 0x8 @148
 	SAY 0xC @148
+COPY_EXISTING ~rahvin.cre~ ~override/StoHarr.cre~
+        SAY 0x8 @155
+	SAY 0xC @155
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
@@ -180,6 +183,10 @@ COPY_EXISTING ~bdmisc42.ITM~ ~override/StoSoDH.itm~
         SAY NAME1 @153
         SAY NAME2 @153
 	SAY 0x54 @154
+COPY_EXISTING ~scrl3f.ITM~ ~override/StoWdia.itm~
+        SAY NAME1 @156
+        SAY NAME2 @156
+	SAY 0x54 @157
 
 COPY_EXISTING ~Kieres.dlg~ ~override~
 DECOMPILE_AND_PATCH BEGIN
