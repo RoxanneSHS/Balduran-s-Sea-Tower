@@ -75,6 +75,8 @@ THEN
 RESPONSE #100
 SetGlobal("StoRightWay","Sto104",1)
 CreateCreature("Icmyc01",[843.807],6)
+CreateCreature("Icmyc01",[1183.660],6)
+CreateCreature("Icmyc01",[660.926],8)
 END
 
 IF
