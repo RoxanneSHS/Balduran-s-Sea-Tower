@@ -32,7 +32,9 @@ TriggerActivation("Dungeon",TRUE)
 END
 
 IF
+OR(2)
 Global("STO_ScarDoppel","Global",12)
+Dead("Stomage1")
 Global("Arealook","Sto102",1)
 THEN
 RESPONSE #100
