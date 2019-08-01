@@ -1,0 +1,9 @@
+IF
+Global("BePirate","Locals",1)
+THEN
+RESPONSE #100
+SetGlobal("BePirate","Locals",2)
+Polymorph(PIRATE)
+SetName(@159)
+END
+

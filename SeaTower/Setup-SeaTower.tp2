@@ -132,6 +132,9 @@ COPY ~SeaTower/creatures/StoWinsk.cre~ ~override~
 COPY_EXISTING ~rahvin.cre~ ~override/StoHarr.cre~
         SAY 0x8 @155
 	SAY 0xC @155
+COPY ~SeaTower/creatures/Stoghost.cre~ ~override~
+	SAY 0x8 @158
+	SAY 0xC @158
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
@@ -153,7 +156,7 @@ COPY_EXISTING ~Stoscar.cre~ ~override~
   SAY BATTLE_CRY1 #205167
 END
 
-ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 @1009 @1010 USING ~SeaTower/translations/OL_KnightJournal.tra~
+ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 @1009 @1010 @1011 USING ~SeaTower/translations/OL_KnightJournal.tra~
 
 COPY_EXISTING ~Misc78.ITM~ ~override/Stopass.itm~
         SAY NAME1 @122
@@ -204,6 +207,7 @@ COMPILE
 ~SeaTower/dialogue/Sto_shoptemple.d~
 ~SeaTower/dialogue/Sto_Scarplot.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 COMPILE ~SeaTower/dialogue/Sto_Brown.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+COMPILE ~SeaTower/dialogue/Stoghost.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 COMPILE ~SeaTower/dialogue/Sto_Liaa.d~ EVALUATE_BUFFER
 
 COMPILE
@@ -217,6 +221,7 @@ COMPILE
 ~SeaTower/scripts/StoChart.baf~
 ~SeaTower/scripts/StoLiia.baf~
 ~SeaTower/scripts/StoFlay1.baf~
+~SeaTower/scripts/Stoghost.baf~
 ~SeaTower/scripts/STO101.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 COMPILE~SeaTower/scripts/STO202.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 
