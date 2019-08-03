@@ -8,3 +8,12 @@ Polymorph(PIRATE)
 SetName(@159)
 END
 
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+Allegiance(Myself,NEUTRAL)
+THEN
+RESPONSE #100
+Enemy()
+Attack(NearestEnemyOf(Myself))
+END
+
