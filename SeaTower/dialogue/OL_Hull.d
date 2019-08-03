@@ -1,3 +1,9 @@
+ADD_STATE_TRIGGER Hull 1
+~Global("HelpHull","GLOBAL",0)~
+
+ADD_STATE_TRIGGER Hull 3
+~Global("HelpHull","GLOBAL",0)~
+
 CHAIN
 IF WEIGHT #-1~Global("HelpHull","GLOBAL",1) HasItem("olsw1h12",Myself) Global("OLBuySword","Locals",0) ~ THEN HULL Sellsw1
 ~Thanks for retrieving my heirloom, <CHARNAME>. Is there anything I can help you with?~
