@@ -3,6 +3,7 @@ Global("BePirate","Locals",1)
 THEN
 RESPONSE #100
 SetGlobal("BePirate","Locals",2)
+CreateVisualEffectObject("BDICGLYP","StoGhost")
 Polymorph(PIRATE)
 SetName(@159)
 END

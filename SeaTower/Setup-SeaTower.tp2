@@ -190,6 +190,14 @@ COPY_EXISTING ~scrl3f.ITM~ ~override/StoWdia.itm~
         SAY NAME1 @156
         SAY NAME2 @156
 	SAY 0x54 @157
+COPY_EXISTING ~misc77.ITM~ ~override/Stoskul.itm~
+        SAY NAME1 @160
+        SAY NAME2 @160
+	SAY 0x54 @161
+COPY ~SeaTower/items/Stoamub.ITM~ ~override~
+        SAY NAME1 @162
+        SAY NAME2 @162
+	SAY 0x54 @163
 
 COPY_EXISTING ~Kieres.dlg~ ~override~
 DECOMPILE_AND_PATCH BEGIN
