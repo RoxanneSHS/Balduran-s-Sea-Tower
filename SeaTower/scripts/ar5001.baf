@@ -1,0 +1,16 @@
+IF
+Global("StoGhostHead","Global",3)
+THEN
+RESPONSE #100
+SetGlobal("StoGhostHead","Global",4)
+ActionOverride("Container 1",CreateItem("Stoskul",0,0,0))
+END
+
+IF
+Global("StoGhostHead","Global",4)
+PartyHasItem("Stoskul")
+THEN
+RESPONSE #100
+SetGlobal("StoGhostHead","Global",5)
+AddJournalEntry(@1013,QUEST)
+END

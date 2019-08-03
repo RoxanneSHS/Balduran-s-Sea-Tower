@@ -4,15 +4,16 @@ IF~GlobalLT("STO_ScarDoppel","Global",3)~THEN Stohelm HeSuspicion1
 END
 ++~Sorry, the thought of being watched by some kind of ceaseless eye disturbs me immensely. I'll find my own way out.~ + HeSuspicion2
 IF~Global("SaidStrange","Locals",0)~THEN REPLY~This sounds to me like the Unsleeping Eye sees disturbing things around the tower?~ + HeSuspicion2
-++~I'd like to see what services you have to provide.~DO ~StartStore("tem0002",LastTalkedToBy(Myself))
-~ EXIT
-
+++~I'd like to see what services you have to provide.~DO ~StartStore("tem0002",LastTalkedToBy(Myself)) ~ EXIT
+IF~Global("StoGhostHead","Global",1)Global("AskHeads","Locals",0)~THEN REPLY~Do you know anything about people that may have been beheaded at the Sea Tower in the past?~DO~SetGlobal("AskHeads","Locals",1)~ + HeadsH1
+ 
 CHAIN
 IF ~  True() ~ THEN Stohelm Routine
 ~Welcome to the Watchful Shield. Our devotion to He of the Unsleeping Eye is unswerving. Please, allow us to shield and protect you under the ceaseless gaze of Helm.~
 END
 ++~Sorry, the thought of being watched by some kind of ceaseless eye disturbs me immensely. I'll find my own way out.~ EXIT
 ++~I'd like to see what services you have to provide.~DO ~StartStore("tem0002",LastTalkedToBy(Myself)) ~ EXIT
+IF~Global("StoGhostHead","Global",1)Global("AskHeads","Locals",0)~THEN REPLY~Do you know anything about people that may have been beheaded at the Sea Tower in the past?~DO~SetGlobal("AskHeads","Locals",1)~ + HeadsH1
 
 CHAIN
 IF~~THEN Stohelm HeSuspicion2
@@ -24,12 +25,31 @@ END
 ++~Interesting, I'd like to see what services you have to provide.~DO ~StartStore("tem0002",LastTalkedToBy(Myself)) ~ EXIT
 
 CHAIN
+IF~~THEN Stohelm HeadsH1
+~The Selune Temple on the other end is built on the former execution site. They may know about the history of the place. All of this happened before the Eye of Helm took watch of this place.~EXIT
+
+CHAIN
 IF ~  True() ~ THEN Stoselu RoutineSel
 ~Welcome wanderer and seekers, may Our Lady of Silver light your way. Is any of you a follower of the Moon Maiden?~
 END
 IF~InParty("Rasaad")~THEN REPLY~Rassaad yn Bashir here is a sun soul monk. We'd like to see what services you have to provide.~DO ~StartStore("olselune",LastTalkedToBy(Myself)) ~ EXIT
 ++~Sorry, no but I've always loved to listen to the stories of the night white lady and the man in the moon and such.~ EXIT
 IF~!InParty("Rasaad")~THEN REPLY~No, but we're questers and seekers and may have use for what services you have to provide.~DO ~StartStore("olselune",LastTalkedToBy(Myself)) ~ EXIT
+IF~Global("StoGhostHead","Global",1)~THEN REPLY~Do you know anything about people that may have been beheaded at the Sea Tower in the past?~ + Heads2
+
+CHAIN
+IF~~THEN Stoselu Heads2
+~That was long ago and before even our temple was built.~
+DO~SetGlobal("StoGhostHead","Global",2)~
+=~Actually...now that you mention it, this temple was built on the site of the former block used by the executioner. Of course we sanctified the place first.~
+END
+++~What happened to the remains of those who died here?~ + Heads3
+++~Where did they bring the heads, the skulls, of the convicts?~ + Heads3
+
+CHAIN
+IF~~THEN Stoselu Heads3
+~The executed were pirates. Before building the temple could commence, their remains had to be exhumed. Due to their nature, this was done by Umberlee's priests. I neither know nor care what those disgusting heretics did with pirate skulls and bones. Now excuse me.~EXIT
+
 
 CHAIN
 IF ~Global("Stoscales","Locals",2)~ THEN Stotronk Tronkscales21

@@ -156,7 +156,7 @@ COPY_EXISTING ~Stoscar.cre~ ~override~
   SAY BATTLE_CRY1 #205167
 END
 
-ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 @1009 @1010 @1011 USING ~SeaTower/translations/OL_KnightJournal.tra~
+ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 @1009 @1010 @1011 @1012 @1013 USING ~SeaTower/translations/OL_KnightJournal.tra~
 
 COPY_EXISTING ~Misc78.ITM~ ~override/Stopass.itm~
         SAY NAME1 @122
@@ -208,6 +208,7 @@ COPY_EXISTING ~Kieres.CRE~ ~override~
 REPLACE_CRE_ITEM ~stopass~ #0 #0 #0 ~NONE~ ~inv3~
 
 EXTEND_BOTTOM ~%NEBaldursGate_CountingHouse_L2_BCS%.BCS~ ~SeaTower/scripts/ar0308.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
+EXTEND_BOTTOM ~%ValleyoftheTombs_Tomb_BCS%.BCS~ ~SeaTower/scripts/ar5001.baf~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
 
 COMPILE 
 ~SeaTower/dialogue/Sto_outside.D~ 

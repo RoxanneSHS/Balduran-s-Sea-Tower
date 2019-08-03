@@ -57,6 +57,7 @@ END
 CHAIN
 IF~~THEN Stoghost Head7
 ~Twenty so-called pirates were executed at the Sea Tower that was build as part of Balduran's fortification, call it a sacrifice to the new age of former Gray Harbor to turn it into Baldur's Gate.~
+DO~EraseJournalEntry(@1011)  EraseJournalEntry(@1012) EraseJournalEntry(@1013)~
 =~All of them are dust and forgotten except for me. Maybe I am still here so that the story is not lost, I don't know.~
 END
 ++~What happened to the treasure of Balduran?~ + Head9
@@ -102,3 +103,33 @@ END
 CHAIN
 IF~NumTimesTalkedToGT(2)~THEN Stoghost Want4
 ~(The ghost ignores you.)~EXIT
+
+EXTEND_TOP Jalant 0 #1
+IF ~Global("StoGhostHead","Global",2)~THEN REPLY ~We are looking for information about the remains of pirates that were exumed at the Sea Tower when the Selune temple was errected.~+ Umberl1
+END
+
+CHAIN
+IF~~THEN Jalant Umberl1
+~Are you a necromancer, no, you don't look like one. Why would Umberlee help you when the Moon lunatics wouldn't?~
+END
+++~Because I make a 200gp donation to her coffers.~ + Umbmoney
+++~Because she - or you - want to know why I want to know.~ + NoInterest
+++~Because your life has more worth for you than a bit of lore.~EXTERN Jalant 11
+
+CHAIN
+IF~~THEN Jalant NoInterest
+~Your curiosity is only of interest to yourself, neither me nor the Water Queen care for your business. Now leave.~EXIT
+
+CHAIN
+IF~~THEN Jalant Umbmoney
+~The bodies of infidels are priced highly in these troubled times. Give me 2,000 gold and the information is yours. ~
+END
+++~2,000 gold, that's highway robbery!~EXTERN Jalant 14
+IF~PartyGoldGT(1999)~THEN REPLY~All right then, we're willing to pay the cash.~ DO~SetGlobal("StoGhostHead","Global",3) ~+ Tellocate
+++~We don't have the money right now.~EXIT
+
+CHAIN
+IF~~THEN Jalant Tellocate
+~It is pleasant to do business with you. Now listen.~
+DO~TakePartyGold(2000)AddJournalEntry(@1012,QUEST)~
+=~Those trespassers against Umberlee could not been buried in the sacred grounds of any temple in Baldur's Gate. The place to get rid of any cursed corpses has been the Valley of Tombs east of Nashkel at the times we speak about here. Go and search there.~EXIT
