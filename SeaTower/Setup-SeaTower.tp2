@@ -135,6 +135,15 @@ COPY_EXISTING ~rahvin.cre~ ~override/StoHarr.cre~
 COPY ~SeaTower/creatures/Stoghost.cre~ ~override~
 	SAY 0x8 @158
 	SAY 0xC @158
+COPY ~SeaTower/creatures/Stotrose.cre~ ~override~
+	SAY 0x8 @164
+	SAY 0xC @164
+COPY ~SeaTower/creatures/Stoslime.cre~ ~override~
+	SAY 0x8 @165
+	SAY 0xC @165
+COPY ~SeaTower/creatures/Stowater.cre~ ~override~
+	SAY 0x8 @166
+	SAY 0xC @166
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
