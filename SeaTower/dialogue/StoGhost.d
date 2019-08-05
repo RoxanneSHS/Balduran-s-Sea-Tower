@@ -1,6 +1,15 @@
 BEGIN StoGhost
 
 CHAIN
+IF~Global("BePirate","Locals",3) ~THEN Stoghost FinalRest1
+~Before you go, there is a final task I would ask from you, for mercy's sake.~
+=~My reason to stay in the ghostly state was to tell someone my tale and make known what nature of hero Balduran had been. My time is long over and I deserve to rest. Do me this final favour and release me to my end. Fight me to death.~
+END
+IF~Global("StoDragonspell","Global",2)~THEN REPLY~Great, I need your skull for some other purpose anyway. Give us a good fight, Koltock.~DO~Enemy()~EXIT
+++~If this is your wish, pirate. Give us a good fight, Koltock.~DO~Enemy()~EXIT
+++~You think you deserve our mercy? No, stay what you are, I don't care.~DO~Enemy()~EXIT
+
+CHAIN
 IF~GlobalGT("StoGhostHead","Global",1) PartyHasItem("Stoskul")~THEN Stoghost Head1
 ~(The ghost points enthusiastically at the place where his head should be.)~
 END

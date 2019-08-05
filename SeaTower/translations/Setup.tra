@@ -152,3 +152,16 @@ Weight: 3~
 @164 = ~Sea Troll~
 @165 = ~Algal Slime~
 @166 = ~Water Elemental~
+@167 = ~Teleport Field~
+@168 = ~Teleport Field
+Level: 4
+School: Alteration
+Range: Long
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: 30' radius
+Saving Throw: Spell negates
+
+With this spell, the wizard instigates a teleportation effect as far as the wizard can see. All enemies in this area are randomly teleported for the duration of the spell unless they save vs. spell at -4. This spell is best used against multiple enemies, serving to confuse them and allowing the wizard to concentrate on activating her defenses.~
+@169 = ~Dragon Teleporter~
+@170 = ~This item has only a single charge and a single use - to teleport a dragon from its current location to a cave somewhere along the Sword Coast. How exactly it may work you do not know, you will find out when you bring the scroll to the dragon entrapped below Balduran's Sea Tower.~

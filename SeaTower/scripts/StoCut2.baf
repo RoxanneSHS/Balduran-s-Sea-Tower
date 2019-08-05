@@ -1,0 +1,17 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId("Halbaz")
+SetGlobal("StoDragonspell","Global",3)
+TakePartyItem("stoskul")
+TakePartyItemNum("misc42",2)
+Wait(1)
+CreateVisualEffectObject("BDphydes","halbaz")
+Wait(1)
+CreateVisualEffectObject("BDteleki","halbaz")
+Wait(1)
+GiveItemCreate("StoTele",Player1,0,0,0)
+AddJournalEntry(@1014,QUEST)
+EndCutSceneMode()
+END
