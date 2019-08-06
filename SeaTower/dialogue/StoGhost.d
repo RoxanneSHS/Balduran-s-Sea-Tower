@@ -115,7 +115,13 @@ IF~NumTimesTalkedToGT(2)~THEN Stoghost Want4
 
 EXTEND_TOP Jalant 0 #1
 IF ~Global("StoGhostHead","Global",2)~THEN REPLY ~We are looking for information about the remains of pirates that were exumed at the Sea Tower when the Selune temple was errected.~+ Umberl1
+IF~Global("StoDragonspell","Global",1)Global("Sto_Dragon","Global",2)~THEN REPLY~You sell those teleportation scrolls but they are not strong enough for the purpose I have. I need something to move a mountain...eh...I mean a dragon.~+ DraMo1
 END
+
+CHAIN
+IF~~THEN Jalant DraMo1
+~I will not ask you why you need such a thing because I don't have it. The only despicable place to sell such obscure artefacts could be that *Sorcerous Sundries*. Now leave.~
+DO~SetGlobal("StoDragonspell","Global",2)~EXIT
 
 CHAIN
 IF~~THEN Jalant Umberl1

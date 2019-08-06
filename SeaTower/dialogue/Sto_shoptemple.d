@@ -6,7 +6,7 @@ END
 IF~Global("SaidStrange","Locals",0)~THEN REPLY~This sounds to me like the Unsleeping Eye sees disturbing things around the tower?~ + HeSuspicion2
 ++~I'd like to see what services you have to provide.~DO ~StartStore("tem0002",LastTalkedToBy(Myself)) ~ EXIT
 IF~Global("StoGhostHead","Global",1)Global("AskHeads","Locals",0)~THEN REPLY~Do you know anything about people that may have been beheaded at the Sea Tower in the past?~DO~SetGlobal("AskHeads","Locals",1)~ + HeadsH1
- 
+
 CHAIN
 IF ~  True() ~ THEN Stohelm Routine
 ~Welcome to the Watchful Shield. Our devotion to He of the Unsleeping Eye is unswerving. Please, allow us to shield and protect you under the ceaseless gaze of Helm.~
@@ -36,6 +36,12 @@ IF~InParty("Rasaad")~THEN REPLY~Rassaad yn Bashir here is a sun soul monk. We'd 
 ++~Sorry, no but I've always loved to listen to the stories of the night white lady and the man in the moon and such.~ EXIT
 IF~!InParty("Rasaad")~THEN REPLY~No, but we're questers and seekers and may have use for what services you have to provide.~DO ~StartStore("olselune",LastTalkedToBy(Myself)) ~ EXIT
 IF~Global("StoGhostHead","Global",1)~THEN REPLY~Do you know anything about people that may have been beheaded at the Sea Tower in the past?~ + Heads2
+IF~Global("StoDragonspell","Global",1)Global("Sto_Dragon","Global",2)~THEN REPLY~You sell those teleportation scrolls but they are not strong enough for the purpose I have. I need something to move a mountain...eh...I mean a dragon.~+ DraMo1
+
+CHAIN
+IF~~THEN Stoselu DraMo1
+~I will not ask you why you need such a thing because I don't have it. The only despicable place to sell such obscure artefacts could be that *Sorcerous Sundries*. Now leave.~
+DO~SetGlobal("StoDragonspell","Global",2)~EXIT
 
 CHAIN
 IF~~THEN Stoselu Heads2

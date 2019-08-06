@@ -1,3 +1,5 @@
+BEGIN Stodrago
+
 EXTEND_TOP Halbaz 0 #1
 IF ~Global("StoDragonspell","Global",2)~THEN REPLY ~This may sound unusual but we need a transportation spell that can move a dragon.~+ Stospell1
 END
@@ -31,3 +33,4 @@ IF~~THEN Halbaz Stospell1c
 CHAIN
 IF~~THEN Halbaz Stospell2
 ~Ha, I love such challenges! Now...stand back a bit, this will smell funny, binding half rotten skulls is nothing for finer noses...~DO~SetGlobal("StoDragonspell","Global",3) ClearAllActions() Wait(1)StartCutSceneMode() StartCutScene("Stocut2")~ EXIT
+
