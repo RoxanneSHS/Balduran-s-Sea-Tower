@@ -1,0 +1,18 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+SetGlobal("StoDragonspell","Global",5)
+Wait(1)
+CreateVisualEffectObject("SPSPMaze","stodrago")
+Wait(6)
+ActionOverride("Stodrago",DestroySelf())
+Wait(1)
+AddJournalEntry(@1017,QUEST_DONE)
+EraseJournalEntry(@1008)
+EraseJournalEntry(@1014)
+EraseJournalEntry(@1015)
+EraseJournalEntry(@1016)
+EndCutSceneMode()
+END

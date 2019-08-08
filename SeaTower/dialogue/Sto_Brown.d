@@ -118,3 +118,18 @@ END
 CHAIN
 IF~~THEN Stodrago TooWeak4
 ~(Purr) You can do better, adventurer. There's a large city out there full of resources. One like you should be able to find a more powerful artefact that can suit OUR purpose.~EXIT
+
+CHAIN
+IF~Global("StoDragonspell","Global",3) PartyHasItem("StoTele")~THEN Stodrago RightOne1
+~Ha, I knew you had it in you, puny adventurer whose name I forgot. I'm a brilliant motivator after all.~
+=~May the journey begin!~
+END
+++~This scroll should take you to a cave somewhere else on the Sword Coast once used by some pirates...~ + RightOne2
+++~This was a very costly adventure for me...~ + RightOne2
+++~And I knew you would betray me, wyrm...~ + RightOne2
+
+CHAIN
+IF~~THEN Stodrago RightOne2
+~This cave and everything in it is yours, <CHARNAME> - yes I know how you call yourself.~
+DO~SetGlobal("StoDragonspell","Global",4) TakePartyItem("StoTele")~
+=~Like Tiamat always used to say: Hasta la Vista, baby.~DO~ClearAllActions() Wait(1)StartCutSceneMode() StartCutScene("Stocut3")~ EXIT
