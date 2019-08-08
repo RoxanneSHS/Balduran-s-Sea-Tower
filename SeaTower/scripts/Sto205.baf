@@ -1,0 +1,20 @@
+IF
+Global("setup","sto205",0)
+THEN
+RESPONSE #100
+SetGlobal("setup","sto205",1)
+ContainerEnable("EggsN",FALSE)
+ContainerEnable("Scales",FALSE)
+END
+
+IF
+Global("StoDragonspell","Global",5)
+Global("setup","sto205",1)
+THEN
+RESPONSE #100
+SetGlobal("setup","sto205",2)
+ContainerEnable("EggsN",TRUE)
+ContainerEnable("Scales",TRUE)
+ContainerEnable("EggsP",FALSE)
+Unlock("Chestdra")
+END
