@@ -37,6 +37,12 @@ IF~InParty("Rasaad")~THEN REPLY~Rassaad yn Bashir here is a sun soul monk. We'd 
 IF~!InParty("Rasaad")~THEN REPLY~No, but we're questers and seekers and may have use for what services you have to provide.~DO ~StartStore("olselune",LastTalkedToBy(Myself)) ~ EXIT
 IF~Global("StoGhostHead","Global",1)~THEN REPLY~Do you know anything about people that may have been beheaded at the Sea Tower in the past?~ + Heads2
 IF~Global("StoDragonspell","Global",1)Global("Sto_Dragon","Global",2)~THEN REPLY~You sell those teleportation scrolls but they are not strong enough for the purpose I have. I need something to move a mountain...eh...I mean a dragon.~+ DraMo1
+IF~PartyHasItem("Stoeggs")~THEN REPLY~Can you use these dragon eggs for a purpose?~ + Seluneggs1
+
+CHAIN
+IF ~~ THEN Stoselu Seluneggs1
+~Dragon eggs? What could Selune probably do with them?.~
+=~Maybe a cook in the Ducal Palace or Balduran's library can use them to make scrambled eggs for all.~EXIT
 
 CHAIN
 IF~~THEN Stoselu DraMo1
@@ -71,10 +77,16 @@ END
 IF~Global("StoEmporiumExists","Global",0)PartyHasItem("Stoscale")~THEN REPLY~Can you use these dragon scales for a purpose?~ + Tronkscales1
 ++~Nothing, thanks. I was just leaving.~+ RoutineTronk2
 IF~Global("StoEmporiumExists","Global",1)PartyHasItem("Stoscale")~THEN REPLY~Can you use these dragon scales for a purpose?~ + Tronkscales11
+IF~PartyHasItem("Stoeggs")~THEN REPLY~Can you use these dragon eggs for a purpose?~ + Tronkseggs1
 
 CHAIN
 IF ~~ THEN Stotronk RoutineTronk2
 ~Thanks and fare thee well then.~EXIT
+
+CHAIN
+IF ~~ THEN Stotronk Tronkseggs1
+~Dragon eggs? What could a smith probably do with them?.~
+=~The only despicable place to buy such obscure artefacts could be that *Sorcerous Sundries*.~EXIT
 
 CHAIN
 IF ~~ THEN Stotronk Tronkscales1

@@ -85,3 +85,35 @@ IF~~ THEN FCook2  Hunger9
 CHAIN
 IF~~ THEN FCook2  Hunger10
 ~You do that.~ EXIT
+
+CHAIN
+IF WEIGHT #-2~GlobalGT("Sto_ConvincedChart","Global",1)PartyHasItem("Stoeggs")~THEN FeCook  Hunger6
+~Ya, I don't like no snot-nosed brats causin' trouble here. You better scram, 'fore I give you a whippin'.~
+END
+++~Do you have use for this excellent fresh egg, lady?~ + eggs1
+++~When will the meal be ready?~ + eggs8
+++~Nevermind~EXIT
+
+CHAIN
+IF~~THEN FeCook  eggs8
+~WHAT! Are ya freeloaders, get out! NOW!~EXIT
+
+CHAIN
+IF~~THEN FeCook  eggs1
+~Golly goo, they're BIG. Can feed the whole bloody garrison with one of 'em. You're a nice chap, I give you 1GP for it.~
+END
+++~You must be joking, this is a dragon egg. I had to kill a dragon to get it, it's worth a fortune.~+ eggs2
+++~Better than nothing, I guess. You have a deal.~+ eggs3
+++~Forget it. I'll find another buyer.~+ eggs4
+
+CHAIN
+IF~~THEN FeCook  eggs2
+~'ventures are fools is what I say. My budget for a meal is 1GP and that's already 1GP more than them bunch of greenheaded guards are worth.~EXIT
+
+CHAIN
+IF~~THEN FeCook  eggs3
+~Get gone quick. Ah feel already Ah made a mistake...~DO~GivePartyGold(1) TakePartyItem("Stoeggs")~EXIT
+
+CHAIN
+IF~~THEN FeCook  eggs4
+~'sure you will. The world' fulla fools and the one to buy that junk's already born.~EXIT
