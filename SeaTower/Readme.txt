@@ -14,6 +14,7 @@ There are two quests that can open the area for you.
 
 Optional quests
 - help or defeat a black dragon
+- learn more about Balduran from a headless ghost
 - mind flayers below Baldur's Gate?
 
 https://forgottenrealms.fandom.com/wiki/Seatower_of_Balduran
