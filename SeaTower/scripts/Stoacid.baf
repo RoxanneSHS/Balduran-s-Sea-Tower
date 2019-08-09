@@ -1,0 +1,10 @@
+IF
+OR(3)
+Entered([ANYONE])
+Opened([ANYONE])
+Range([ANYONE],5)
+THEN
+RESPONSE #100
+ForceSpell(LastTrigger,TRAP_ARROW_ACID)
+END
+

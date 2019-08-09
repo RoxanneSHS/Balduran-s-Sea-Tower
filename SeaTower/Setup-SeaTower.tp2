@@ -219,6 +219,10 @@ COPY ~SeaTower/items/Stotele.ITM~ ~override~
         SAY NAME1 @169
         SAY NAME2 @169
 	SAY 0x54 @170
+COPY ~SeaTower/items/Stoeggs.ITM~ ~override~
+        SAY NAME1 @179
+        SAY NAME2 @179
+	SAY 0x54 @180
 COPY_EXISTING ~stoscale.ITM~ ~override/Stoscal2.itm~
         SAY NAME1 @172
         SAY NAME2 @172
@@ -263,6 +267,7 @@ COMPILE
 ~SeaTower/scripts/STO104.baf~
 ~SeaTower/scripts/STO203.baf~
 ~SeaTower/scripts/Sto205.baf~
+~SeaTower/scripts/Stoacid.baf~
 ~SeaTower/scripts/Stogrd1.baf~
 ~SeaTower/scripts/Stogrd2.baf~
 ~SeaTower/scripts/StoCut1.baf~
