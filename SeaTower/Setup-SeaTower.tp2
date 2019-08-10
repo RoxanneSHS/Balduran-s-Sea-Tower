@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V0.3~
+VERSION ~V0.4~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -277,6 +277,10 @@ COMPILE~SeaTower/scripts/STOCut3.baf~ USING ~SeaTower/translations/OL_KnightJour
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~dragblac.bcs~ THEN BEGIN
 COMPILE~SeaTower/scripts/Dragblac.baf~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~initin15.bcs~ THEN BEGIN
+COMPILE~SeaTower/scripts/initin15.baf~
 END
 
 COPY ~SeaTower/stores/olselune.STO~ ~override~
