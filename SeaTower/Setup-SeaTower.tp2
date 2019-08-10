@@ -259,6 +259,7 @@ COMPILE
 ~SeaTower/scripts/STO100.baf~ 
 ~SeaTower/scripts/STO102.baf~
 ~SeaTower/scripts/STO104.baf~
+~SeaTower/scripts/Leave104.baf~
 ~SeaTower/scripts/STO203.baf~
 ~SeaTower/scripts/Sto205.baf~
 ~SeaTower/scripts/Stoacid.baf~
@@ -282,6 +283,17 @@ END
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~initin15.bcs~ THEN BEGIN
 COMPILE~SeaTower/scripts/initin15.baf~
 END
+
+COPY_EXISTING ~Aasim.cre~ ~override~
+	WRITE_ASCII 0x250 ~Leave104~ #8
+COPY_EXISTING ~Tazok2.cre~ ~override~
+	WRITE_ASCII 0x250 ~Leave104~ #8
+COPY_EXISTING ~Naaman.cre~ ~override~
+	WRITE_ASCII 0x250 ~Leave104~ #8
+COPY_EXISTING ~Aasim.cre~ ~override~
+	WRITE_ASCII 0x250 ~Leave104~ #8
+COPY_EXISTING ~ZHalim.cre~ ~override~
+	WRITE_ASCII 0x258 ~Leave104~ #8
 
 COPY ~SeaTower/stores/olselune.STO~ ~override~
 SAY 0xc @133

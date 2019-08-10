@@ -1,0 +1,8 @@
+IF
+AreaCheck("Sto104")
+HPPercentLT(Myself,50)
+THEN
+RESPONSE #100
+ClearAllActions()
+ForceSpell(Myself,DRYAD_TELEPORT)
+END
