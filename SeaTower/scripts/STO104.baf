@@ -39,27 +39,6 @@ ActionOverride("Tazok",ForceSpell(Myself,DRYAD_TELEPORT))
 END
 
 IF
-HPLT("Naaman",40)
-THEN
-RESPONSE #100
-ActionOverride("Naaman",ForceSpell(Myself,DRYAD_TELEPORT))
-END
-
-IF
-HPLT("Zhalimar",50)
-THEN
-RESPONSE #100
-ActionOverride("Zhalimar",ForceSpell(Myself,DRYAD_TELEPORT))
-END
-
-IF
-HPLT("Aasim",50)
-THEN
-RESPONSE #100
-ActionOverride("Aasim",ForceSpell(Myself,DRYAD_TELEPORT))
-END
-
-IF
 Global("StoOtherWay","Sto104",2)
 THEN
 RESPONSE #100
