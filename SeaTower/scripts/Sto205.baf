@@ -18,3 +18,13 @@ ContainerEnable("Scales",TRUE)
 ContainerEnable("EggsP",FALSE)
 Unlock("Chestdra")
 END
+
+IF
+PartyHasItem("stoeggs") 
+GlobalLT("StoDragonspell","Global",5)
+!Dead("stodrago")
+THEN
+RESPONSE #100
+SetGlobal("StoDragonspell","Global",7)
+ActionOverride("Stodrago",Enemy())
+END
