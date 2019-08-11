@@ -301,7 +301,25 @@ SAY 0xc @133
 COPY ~SeaTower/stores/olblksmt.sto~ ~override~
 SAY 0xc @138
 
+ACTION_IF FILE_EXISTS_IN_GAME ~aldeth.sto~ THEN BEGIN
+COPY_EXISTING ~aldeth.sto~ ~override~
+  ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
+END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~erdane.sto~ THEN BEGIN
+COPY_EXISTING ~erdane.sto~ ~override~
+  ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ THEN BEGIN
+COPY_EXISTING ~highhedg.sto~ ~override~
+  ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sto1112.sto~ THEN BEGIN
+COPY_EXISTING ~sto1112.sto~ ~override~
+  ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
+END
 
 BEGIN ~Ghost Knights at Ulcaster~
 

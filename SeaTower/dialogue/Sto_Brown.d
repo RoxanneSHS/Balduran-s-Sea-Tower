@@ -102,7 +102,7 @@ END
 
 CHAIN
 IF~~THEN Stodrago TooWeak2
-~You will find everything that I promised you here in my lair when I'm gone. Take what you want from it.~DO~SetGlobal("StoFailed","sto205",1) TakePartyItem("Scrl6q") Wait(1) CreateVisualEffectObject("SPSump",Myself)~EXIT
+~You will find everything that I promised you here in my lair when I'm gone. Take what you want from it.~DO~SetGlobal("StoFailed","sto205",1) TakePartyItemNum("Scrl6q",1) Wait(1) CreateVisualEffectObject("SPSump",Myself)~EXIT
 
 CHAIN
 IF~Global("StoFailed","sto205",1)~THEN Stodrago TooWeak3

@@ -8,3 +8,11 @@ RESPONSE #100
 SetGlobal("StoTowerHostile","Global",1)
 Enemy()
 END
+
+IF
+Global("StoTowerHostile","Global",0)
+Global("StoGotPass","GLOBAL",2)
+THEN
+RESPONSE #100
+RandomWalk()
+END
