@@ -48,7 +48,7 @@ CHAIN
 IF~~THEN Stoghost Head5
 ~Nay, I'm not trying to judge Balduran for his deeds. He was a conqueror and explorer, just like a Nelanther islander can wish to have as a captain. You don't survive or get respected in that occupation by bringing flowers and helping old ladies across the road. You fight, you kill, you loot, and you celebrate your victories with rum and women.~
 =~There's no difference between a pirate and a conquistador and Balduran himself wouldn't make such. Until...until he came home to the misrable village that was his hometown with his pockets full of wealth and realised he had more than he could spend within a lifetime.~
-=~He invested much of this wealth into fortifying the towns walls and Gray Harbor began to prosper. He was liked and respected - the town was renamed to Baldur's Gate to hail him. Somehow he became afraid that his former comrades were no longer adequate for a leader like he wanted to be. Many retired and settled with him to become merchants and citizens.~
+=~He invested much of this wealth into fortifying the town's walls and Gray Harbor began to prosper. He was liked and respected - the town was renamed to Baldur's Gate to hail him. Somehow he became afraid that his former comrades were no longer adequate for a leader like he wanted to be. Many retired and settled with him to become merchants and citizens.~
 END
 ++~Not you, I guess?~ + Head6
 ++~You should have done the same.~ + Head6

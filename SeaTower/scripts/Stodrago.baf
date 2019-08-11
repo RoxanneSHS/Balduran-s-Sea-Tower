@@ -1,8 +1,9 @@
 IF
 Global("StoFailed","sto205",1)
-Delay(12)
+Delay(6)
 THEN
 RESPONSE #100
+Wait(5)
 Dialogue([PC])
 END
 
