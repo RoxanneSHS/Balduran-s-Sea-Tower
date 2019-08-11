@@ -5,3 +5,15 @@ RESPONSE #100
 SetGlobal("StoOtherWay","Sto204",1)
 CreateCreature("Emitar4",[2300.500],3)
 END
+
+IF
+GlobalGT("StoDragonspell","Global",1)
+PartyHasItem("stoskul")
+Global("Pirates","Sto204",0)
+THEN
+RESPONSE #100
+SetGlobal("Pirates","Sto204",1)
+CreateCreature("Stopirat",[1674.2431],7)
+CreateCreature("Stopirat",[1774.2366],6)
+CreateCreature("Stopirat",[1674.2331],5)
+END
