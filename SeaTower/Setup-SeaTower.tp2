@@ -155,6 +155,12 @@ COPY ~SeaTower/creatures/Stodrago.cre~ ~override~
 COPY ~SeaTower/creatures/STOPIRAT.CRE~ ~override~
 	SAY 0x8 @181
 	SAY 0xC @181
+COPY ~SeaTower/creatures/STOBrain.CRE~ ~override~
+	SAY 0x8 @182
+	SAY 0xC @182
+COPY ~SeaTower/creatures/STOGolb.CRE~ ~override~
+	SAY 0x8 @183
+	SAY 0xC @183
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
@@ -228,6 +234,12 @@ COPY_EXISTING ~book09.ITM~ ~override/Stobok9.itm~
         SAY NAME1 @174
         SAY NAME2 @174
 	SAY 0x54 @175
+COPY_EXISTING ~potn48.ITM~ ~override/Stoblood.itm~
+        SAY NAME1 @185
+        SAY NAME2 @185
+	SAY 0x54 @186
+	WRITE_ASCII 0x3a ~imisc8h~
+	WRITE_ASCII 0x58 ~cmisc8h~
 	
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~scrl6q.itm~ THEN BEGIN
 COPY ~SeaTower/items/scrl6q.ITM~ ~override~
@@ -276,6 +288,7 @@ COMPILE
 ~SeaTower/scripts/StoFlay1.baf~
 ~SeaTower/scripts/Stoghost.baf~
 ~SeaTower/scripts/Stodrago.baf~
+~SeaTower/scripts/Stobrain.baf~
 ~SeaTower/scripts/STO101.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 COMPILE~SeaTower/scripts/STO202.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
 COMPILE~SeaTower/scripts/STOCut2.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
@@ -287,6 +300,10 @@ END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~initin15.bcs~ THEN BEGIN
 COMPILE~SeaTower/scripts/initin15.baf~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~GOLBRA01.bcs~ THEN BEGIN
+COMPILE~SeaTower/scripts/GOLBRA01.baf~
 END
 
 COPY_EXISTING ~Aasim.cre~ ~override~
