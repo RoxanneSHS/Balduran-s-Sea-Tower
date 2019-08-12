@@ -43,6 +43,27 @@ IF~~ THEN Stoflund TalkBrown5
 DO~AddJournalEntry(@1008,QUEST) Wait(1) MoveToPointNoInterrupt([4473.2148])~ EXIT
 
 CHAIN
+IF~GlobalGT("StoDragonspell","Global",4) Global("StoDone","Locals",0)~THEN Stoflund TalkFin1
+~Her calling has stopped. I can sleep again. Whatever you did, adventurers, we are rid of the dragon.~
+DO~SetGlobal("StoDone","Locals",1)~
+END
+IF~!Dead("stodrago")~THEN REPLY~We solved it in a heroic way, man, the beast is dead.~+ TalkFin2
+IF~Global("StoDragonspell","Global",5)~THEN REPLY~We have set the dragon free. Her name was Ueurwen and she may now be in some remote cave somewhere along the Sword Coast.~ + TalkFin3
+++~Yes, we did our job, as usual, you may sleep in ignorance.~ + TalkFin4
+
+CHAIN
+IF~~THEN Stoflund TalkFin2
+~You may consider yourself a hero but I can't see anything heroic in your deed. It just proves you consider limited options and have a big sword.~DO~EscapeArea()~EXIT
+
+CHAIN
+IF~~THEN Stoflund TalkFin3
+~This is good to hear. She did no wrong, she was just in the wrong place down there. If you ever feel like taking a cruise around here, my boat will serve you. Farewell.~DO~SetGlobal("StoDone","Locals",2)~EXIT
+
+CHAIN
+IF~~THEN Stoflund TalkFin4
+~Thanks anyway. Whatever reason you had, I have my peace now. Not that I like you any better for it...~DO~EscapeArea()~EXIT
+
+CHAIN
 IF~Global("StoDragonspell","Global",0)~THEN Stodrago NotWelc1
 ~It is time you came, however-you-call-yourself.~
 DO~SetGlobal("StoDragonspell","Global",1)~
