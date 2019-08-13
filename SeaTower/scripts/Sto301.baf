@@ -1,0 +1,44 @@
+IF
+Global("StoOtherWay","Sto301",0)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto301",1)
+CreateCreature("CVjendg",[1980.733],3)
+CreateCreature("CVjendg",[1870.620],13)
+CreateCreature("CVjendg",[1660.963],5)
+CreateCreature("CVjendg",[1630.1083],9)
+CreateCreature("CVjendg",[1460.933],11)
+CreateCreature("CVjendg",[950.1050],3)
+END
+
+IF
+Global("StoOtherWay","Sto301",1)
+Dead("Stobrain")
+!InParty("CVJenlig")
+Delay(6)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto301",3)
+Wait(6)
+DisplayStringWait(Player1,@190)
+END
+
+IF
+Global("StoOtherWay","Sto301",3)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto301",4)
+AddJournalEntry(@191,QUEST_DONE)
+END
+
+IF
+Global("StoOtherWay","Sto301",1)
+Dead("Stobrain")
+InParty("CVJenlig")
+Delay(6)
+!StateCheck("CVJenlig",CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("StoOtherWay","Sto301",2)
+ActionOverride("CVJenlig",StartDialogNoSet("CVJenlig"))
+END
