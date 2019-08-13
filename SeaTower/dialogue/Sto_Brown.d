@@ -47,7 +47,7 @@ IF~GlobalGT("StoDragonspell","Global",4) Global("StoDone","Locals",0)~THEN Stofl
 ~Her calling has stopped. I can sleep again. Whatever you did, adventurers, we are rid of the dragon.~
 DO~SetGlobal("StoDone","Locals",1)~
 END
-IF~!Dead("stodrago")~THEN REPLY~We solved it in a heroic way, man, the beast is dead.~+ TalkFin2
+IF~Dead("stodrago")~THEN REPLY~We solved it in a heroic way, man, the beast is dead.~+ TalkFin2
 IF~Global("StoDragonspell","Global",5)~THEN REPLY~We have set the dragon free. Her name was Ueurwen and she may now be in some remote cave somewhere along the Sword Coast.~ + TalkFin3
 ++~Yes, we did our job, as usual, you may sleep in ignorance.~ + TalkFin4
 
