@@ -161,6 +161,9 @@ COPY ~SeaTower/creatures/STOBrain.CRE~ ~override~
 COPY ~SeaTower/creatures/STOGolb.CRE~ ~override~
 	SAY 0x8 @183
 	SAY 0xC @183
+COPY ~SeaTower/creatures/STOGauth.CRE~ ~override~
+	SAY 0x8 @187
+	SAY 0xC @187
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
