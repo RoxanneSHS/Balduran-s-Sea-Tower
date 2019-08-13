@@ -27,7 +27,7 @@ THEN
 END
 
 IF
-	OR(4)
+	OR(3)
 		Global("OH_Active","LOCALS",0)
 		!Allegiance(Myself,EVILCUTOFF)
 		StateCheck(Myself,STATE_REALLY_DEAD)

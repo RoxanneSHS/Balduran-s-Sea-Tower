@@ -14,7 +14,7 @@ THEN
 END
 
 IF
-	OR(5)
+	OR(4)
 		Global("OH_Active","LOCALS",0)
 		!Allegiance(Myself,EVILCUTOFF)
 		StateCheck(Myself,STATE_PANIC)
@@ -47,7 +47,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("OH_CHCntg","LOCALS",1)
 		SetGlobalTimer("OH_SoC","LOCALS",FIVE_ROUNDS)
-		DisplayString(Myself,26328)  // Chain Contingency
 		ReallyForceSpell(Myself,WIZARD_SPHERE_OF_CHAOS)  // SPWI711.SPL (Chaos)
 		ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_ENERGY)  // SPWI803.SPL (Protection from Energy)
 		ReallyForceSpell(Myself,WIZARD_SPELL_TURNING)  // SPWI701.SPL (Greater Spell Deflection)
@@ -63,7 +62,6 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("OH_Cntg","LOCALS",1)
-		DisplayString(Myself,8292)  // Contingency Active
 		ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)  // SPWI405.SPL (Improved Invisibility)
 		Continue()
 END
@@ -105,7 +103,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN10",Myself)  // Potion of Invisibility
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -117,7 +114,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN52",Myself)  // Potion of Extra Healing
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -141,7 +137,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("OH_Trig","LOCALS",1)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26243)  // Spell Trigger
 		ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)  // SPWI611.SPL (Protection from Magical Weapons)
 		ReallyForceSpell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 		ReallyForceSpell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)  // SPWI602.SPL (Globe of Invulnerability)
@@ -156,7 +151,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("OH_Seq","LOCALS",1)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,39969)  // Spell Sequencer—Fired
 		ReallyForceSpell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 		ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)  // SPWI405.SPL (Improved Invisibility)
 		ReallyForceSpell(Myself,WIZARD_MINOR_SPELL_DEFLECTION)  // SPWI318.SPL (Minor Spell Deflection)
@@ -182,7 +176,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN10",Myself)  // Potion of Invisibility
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -275,7 +268,6 @@ THEN
 		SetGlobal("OH_MSeq","LOCALS",1)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		SetSequence(SEQ_CAST)
-		DisplayString(Myself,8635)  // Minor Sequencer Activated
 		ReallyForceSpell(Myself,WIZARD_BLUR)  // SPWI201.SPL (Blur)
 		ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
 END
@@ -1864,7 +1856,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -1897,7 +1888,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -1930,7 +1920,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -1963,7 +1952,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -1996,7 +1984,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -2029,7 +2016,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -2062,7 +2048,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -2095,7 +2080,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -2128,7 +2112,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 
@@ -2161,7 +2144,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("WAND04",LastSeenBy(Myself))  // Wand of Paralyzation
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		SetInterrupt(TRUE)
 END
 

@@ -27,7 +27,7 @@ THEN
 END
 
 IF
-	OR(4)
+	OR(3)
 		Global("OH_Active","LOCALS",0)
 		!Allegiance(Myself,EVILCUTOFF)
 		StateCheck(Myself,STATE_REALLY_DEAD)
@@ -56,7 +56,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_HIDE","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,101647)  // *attempts to hide in shadows*
 		Hide()
 		SetInterrupt(TRUE)
 END
@@ -103,7 +102,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN10",Myself)  // Potion of Invisibility
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -116,7 +114,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN17",Myself)  // Elixir of Health
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -130,7 +127,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN52",Myself)  // Potion of Extra Healing
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -156,7 +152,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN10",Myself)  // Potion of Invisibility
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -169,7 +164,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN11",Myself)  // Potion of Invulnerability
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -215,7 +209,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN10",Myself)  // Potion of Invisibility
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetGlobal("OH_Ranged","LOCALS",1)
 		SetGlobal("OH_Melee","LOCALS",0)
 		EquipRanged()
@@ -281,7 +274,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN11",Myself)  // Potion of Invulnerability
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -294,7 +286,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN35",Myself)  // Potion of Magic Shielding
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -306,7 +297,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN14",Myself)  // Oil of Speed
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -318,7 +308,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN34",Myself)  // Potion of Magic Protection
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -330,7 +319,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN21",Myself)  // Potion of Clarity
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -342,7 +330,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN45",Myself)  // Potion of Freedom
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 END
 
 IF
@@ -355,7 +342,6 @@ THEN
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
 		UseItem("POTN05",Myself)  // Potion of Fire Giant Strength
-		DisplayStringHead(Myself,46150)  // *quaffs a potion*
 		SetInterrupt(TRUE)
 END
 
@@ -442,7 +428,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -465,7 +450,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -488,7 +472,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -511,7 +494,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -534,7 +516,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -557,7 +538,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -580,7 +560,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -603,7 +582,6 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-		DisplayStringHead(Myself,31971)  // *uses a wand*
 		UseItem("RODS06",LastSeenBy(Myself))  // Rod of Reversal
 		SetInterrupt(TRUE)
 END
@@ -678,7 +656,6 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("OHR_DI","LOCALS",ONE_ROUND)
-		DisplayString(Myself,101646)  // *attempts to detect illusions*
 		FindTraps()
 END
 
