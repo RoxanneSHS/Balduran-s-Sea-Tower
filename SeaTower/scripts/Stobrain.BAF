@@ -17,8 +17,8 @@ Global("firstspawn","LOCALS",0)
 THEN
 RESPONSE #100
 SetGlobal("firstspawn","LOCALS",1)
-CreateVisualEffect("SPROTECT",[728.711])
-CreateCreature("Stogolb",[728.711],E)
+CreateVisualEffect("SPROTECT",[1872.660])
+CreateCreature("Stogolb",[1872.660],10)
 CreateVisualEffect("SPROTECT",[501.905])
-CreateCreature("stogolb",[501.905],E)
-END  
+CreateCreature("stogolb",[2157.748],3)
+END
