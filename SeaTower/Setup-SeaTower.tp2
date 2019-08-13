@@ -164,6 +164,15 @@ COPY ~SeaTower/creatures/STOGolb.CRE~ ~override~
 COPY ~SeaTower/creatures/STOGauth.CRE~ ~override~
 	SAY 0x8 @187
 	SAY 0xC @187
+COPY ~SeaTower/creatures/STOThra1.CRE~ ~override~
+	SAY 0x8 @188
+	SAY 0xC @188
+COPY ~SeaTower/creatures/STOThra2.CRE~ ~override~
+	SAY 0x8 @188
+	SAY 0xC @188
+COPY ~SeaTower/creatures/STOThra3.CRE~ ~override~
+	SAY 0x8 @188
+	SAY 0xC @188
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
@@ -307,6 +316,18 @@ END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~GOLBRA01.bcs~ THEN BEGIN
 COMPILE~SeaTower/scripts/GOLBRA01.baf~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~OHBFIG01.bcs~ THEN BEGIN
+COMPILE~SeaTower/scripts/OHBFIG01.baf~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~OHBmag01.bcs~ THEN BEGIN
+COMPILE~SeaTower/scripts/OHBmag01.baf~
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~OHBarc01.bcs~ THEN BEGIN
+COMPILE~SeaTower/scripts/OHBarc01.baf~
 END
 
 COPY_EXISTING ~Aasim.cre~ ~override~
