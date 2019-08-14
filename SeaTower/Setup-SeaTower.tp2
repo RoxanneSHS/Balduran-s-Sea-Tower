@@ -276,6 +276,7 @@ REPLACE_CRE_ITEM ~stopass~ #0 #0 #0 ~NONE~ ~inv3~
 
 EXTEND_BOTTOM ~%NEBaldursGate_CountingHouse_L2_BCS%.BCS~ ~SeaTower/scripts/ar0308.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
 EXTEND_BOTTOM ~%ValleyoftheTombs_Tomb_BCS%.BCS~ ~SeaTower/scripts/ar5001.baf~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
+EXTEND_TOP ~%ValleyoftheTombs_BCS%.bcs~ ~SeaTower/scripts/ar5000.baf~ EVALUATE_BUFFER
 
 COMPILE 
 ~SeaTower/dialogue/Sto_outside.D~ 

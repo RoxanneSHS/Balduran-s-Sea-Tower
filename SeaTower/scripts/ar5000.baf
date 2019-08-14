@@ -1,0 +1,11 @@
+IF
+Global("StoGhostHead","Global",5)
+PartyHasItem("Stoskul")
+Global("Stoambush","%ValleyoftheTombs%",0)
+THEN
+RESPONSE #100
+SetGlobal("Stoambush","%ValleyoftheTombs%",1)
+CreateCreature("Stopirat",[1072.1876],6)
+CreateCreature("Stopirat",[960.1970],8)
+CreateCreature("Stopirat",[760.1910],12)
+END
