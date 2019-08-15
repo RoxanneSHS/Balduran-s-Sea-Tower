@@ -50,7 +50,7 @@ RESPONSE #100
 SetGlobal("StoInsaneMF","Global",2)
 CreateCreature("Stogauth",[1900.2640],11)
 CreateCreature("Stogauth",[1800.2560],13)
-CreateCreature("Stogthra3",[1610.2220],14)
+CreateCreature("Stothra3",[1610.2220],14)
 CreateCreature("StoNEOT",[1600.1020],3)
 CreateCreature("umbhul01",[720.1410],1)
 CreateCreature("umbhul01",[673.1520],0)
