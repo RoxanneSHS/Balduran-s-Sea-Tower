@@ -1,0 +1,6 @@
+IF
+Global("StoInsaneMF","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("StoInsaneMF","Global",1)
+END

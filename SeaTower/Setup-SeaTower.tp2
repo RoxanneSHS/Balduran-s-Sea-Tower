@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V0.5~
+VERSION ~V0.6~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -137,6 +137,10 @@ COPY ~SeaTower/creatures/StoWinsk.cre~ ~override~
 COPY_EXISTING ~rahvin.cre~ ~override/StoHarr.cre~
         SAY 0x8 @155
 	SAY 0xC @155
+COPY_EXISTING ~bdneothe.cre~ ~override/StoNEOT.CRE~
+        WRITE_ASCII 0x280 ~Stoneot~ #8
+COPY_EXISTING ~bddlich.cre~ ~override/Stolich.CRE~
+        WRITE_ASCII 0x280 ~Stolich~ #8
 COPY ~SeaTower/creatures/Stoghost.cre~ ~override~
 	SAY 0x8 @158
 	SAY 0xC @158
@@ -385,6 +389,12 @@ COPY_EXISTING ~sto1112.sto~ ~override~
   ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
 END
 
+
+BEGIN ~Increase mind flayer dungeon difficulty~
+
+COMPILE ~SeaTower/scripts/STO110.baf~
+
+
 BEGIN ~Ghost Knights at Ulcaster~
 
 ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -549,3 +559,4 @@ COPY_EXISTING ~POGHM5.dlg~ ~override~
 DECOMPILE_AND_PATCH BEGIN
 REPLACE_TEXTUALLY ~"tem2601"~ ~"oltm2601"~
 END
+

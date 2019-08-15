@@ -42,3 +42,19 @@ RESPONSE #100
 SetGlobal("StoOtherWay","Sto301",2)
 ActionOverride("CVJenlig",StartDialogNoSet("CVJenlig"))
 END
+
+IF
+Global("StoInsaneMF","Global",1)
+THEN
+RESPONSE #100
+SetGlobal("StoInsaneMF","Global",2)
+CreateCreature("Stogauth",[1900.2640],11)
+CreateCreature("Stogauth",[1800.2560],13)
+CreateCreature("Stogthra3",[1610.2220],14)
+CreateCreature("StoNEOT",[1600.1020],3)
+CreateCreature("umbhul01",[720.1410],1)
+CreateCreature("umbhul01",[673.1520],0)
+CreateCreature("Stogauth",[400.1860],11)
+CreateCreature("Stogauth",[365.1770],13)
+CreateCreature("umbhul01",[1000.2760],1)
+END
