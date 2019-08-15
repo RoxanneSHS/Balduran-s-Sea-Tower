@@ -58,3 +58,13 @@ CreateCreature("Stogauth",[400.1860],11)
 CreateCreature("Stogauth",[365.1770],13)
 CreateCreature("umbhul01",[1000.2760],1)
 END
+
+IF
+!Contains("Olpotn02","Brain")
+Global("Stofill","Sto301",0)
+THEN
+RESPONSE #100
+SetGlobal("Stofill","Sto301",1)
+ActionOverride("Brain",CreateItem("olpotn02",4,0,0))
+ActionOverride("Potion",CreateItem("olpotn01",2,0,0))
+END
