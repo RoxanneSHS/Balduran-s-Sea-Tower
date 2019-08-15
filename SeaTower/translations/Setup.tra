@@ -200,3 +200,19 @@ Weight: 60~
 @191= ~Illithids Below Sea Tower
 
 With the key found on Winski Perorate we discovered a mind flayer enclave below the Sea Tower. It seems that Githyanki had already interrupted the activities of the illithids in the area. We just cleared up the reamains. The githyanki had taken whatever evidence there might have been about the illithid's intentions. It remains a mystery what the illithids had intended to do in Baldur's Gate as well it remains hidden if Winski or even Sarevok were involved in the machinations.~
+@192= ~Potion of Additional Healing~
+@193= ~When wholly consumed, this potion restores 15 Hit Points to the person. The effect is instantaneous and the potion is destroyed in the process.
+
+STATISTICS:
+
+Special: Restores 15 Hit Points.
+
+Weight: 1~
+@194= ~Potion of Remarkable Healing~
+@195= ~When wholly consumed, this potion restores 21 Hit Points to the person. The effect is instantaneous and the potion is destroyed in the process.
+
+STATISTICS:
+
+Special: Restores 21 Hit Points.
+
+Weight: 1~

@@ -4,6 +4,7 @@ THEN
 RESPONSE #100
 SetGlobal("StoGhostHead","Global",4)
 ActionOverride("Container 1",CreateItem("Stoskul",0,0,0))
+ActionOverride("Container 1",CreateItem("olpotn02",2,0,0))
 END
 
 IF

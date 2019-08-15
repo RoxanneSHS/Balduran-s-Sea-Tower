@@ -257,6 +257,16 @@ COPY_EXISTING ~potn48.ITM~ ~override/Stoblood.itm~
 	SAY 0x54 @186
 	WRITE_ASCII 0x3a ~imisc8h~
 	WRITE_ASCII 0x58 ~cmisc8h~
+COPY ~SeaTower/items/olpotn01.ITM~ ~override~
+        SAY NAME1 @192
+        SAY NAME2 @192
+	SAY 0x54 @193
+COPY ~SeaTower/items/olpotn01.bam~ ~override~
+COPY ~SeaTower/items/olpotn02.ITM~ ~override~
+        SAY NAME1 @194
+        SAY NAME2 @194
+	SAY 0x54 @195
+COPY ~SeaTower/items/olpotn02.bam~ ~override~
 	
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~scrl6q.itm~ THEN BEGIN
 COPY ~SeaTower/items/scrl6q.ITM~ ~override~
@@ -361,11 +371,13 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~erdane.sto~ THEN BEGIN
 COPY_EXISTING ~erdane.sto~ ~override~
   ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~olpotn01~ #3 #0 #0 ~IDENTIFIED~ #3
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~highhedg.sto~ THEN BEGIN
 COPY_EXISTING ~highhedg.sto~ ~override~
   ADD_STORE_ITEM ~scrl6q~ #1 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~olpotn02~ #3 #0 #0 ~IDENTIFIED~ #3
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~sto1112.sto~ THEN BEGIN
