@@ -1,0 +1,9 @@
+IF
+	Clicked([ANYONE])
+	Global("StoCLICKED","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("StoCLICKED","MYAREA",1)
+		TriggerActivation("InfoHouse",FALSE)
+END
+
