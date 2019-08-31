@@ -1,0 +1,15 @@
+IF
+Global("StoEmporiumExists","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("StoEmporiumExists","Global",1)
+OpenDoor("Door Object 15")
+END
+
+IF
+Global("Close15","%EBaldursGate%",0)
+THEN
+RESPONSE #100
+SetGlobal("Close15","%EBaldursGate%",1)
+CloseDoor("Door Object 15")
+END

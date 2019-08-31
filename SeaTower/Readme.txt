@@ -19,3 +19,8 @@ Optional quests
 
 https://forgottenrealms.fandom.com/wiki/Seatower_of_Balduran
 
+Other modules
+- Ghost Knights at Ulcaster, extends the quest of Ulcaster/Firewine
+- Hull's Sword, provides the intelligent protagonist with a fine weapon
+- Baldur's Gate Arms and Armour Emporium, adds a smith to enhance items and some merchants with quality wares to the city
+

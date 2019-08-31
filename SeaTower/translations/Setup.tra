@@ -216,3 +216,74 @@ STATISTICS:
 Special: Restores 21 Hit Points.
 
 Weight: 1~
+
+@200= ~The shabby door conceals the town's most prestigeous smithy.~
+@201= ~Michael of Baldur's Gate~
+@202= ~Arms and Armour Emporium~
+@203= ~Emporium Merchant~
+@204= ~Hide Armour +1~
+@205= ~Hide armor is made from the thick hide of a very large animal (an elephant for example) or from many layers of normal leather from common animals, like cows. Hide armor is far too bulky, inflexible and heavy to be used much in advanced human cultures. However, among the barbaric humanoid masses throughout the dark forests and misty jungles of the world, hide armor is common. Even though it does offer more protection than leather armor, one must get by the offensive odor and shoddy appearance in order to wear it effectively. Even though Thieves can wear this armor, it has a negative effect on their abilities. This armor is enchanted, granting the wearer additional protection.
+
+STATISTICS:
+
+Equipped abilities:
+– Open Locks: -10%
+– Find Traps: -10%
+– Pick Pockets: -10% 
+– Move Silently: -20%
+
+Armor Class: 5 (7 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 15~
+@206= ~Club +2~
+@207= ~Fashioned from the hardest old oak from the High Forest, this gnarled cudgel can fell an adult grizzly when wielded by a skilled warrior.
+
+STATISTICS:
+
+THAC0: +2 
+Damage: 1d6+2 (crushing) 
+Speed Factor: 2 
+Proficiency Type: Club 
+Type: One-handed 
+Requires: 
+5 Strength
+
+Weight: 3~
+@208= ~Long Sword +3 'Varscona'~
+@209= ~Blades of this type were long used by Sharran priests during the sacrificial rites of "Feast of the Moon" ceremonies. Legends say that, when she passed on, the remains of this sword's wielder were mummified and the blade was placed within her chest as a symbol of power. In the first stage of a long forgotten ritual, she was to have been exhumed in a season, born again in some new form. Unfortunately, cult wars killed the few that knew of her existence; her tomb became a prison where she was forgotten, and there she developed a rage that bordered on insanity. Her grave was eventually found, but it was deserted and gave no indication of her whereabouts. Some venture to say that her anger was so concentrated that she became one with the very blade of her weapon. Regardless, after hundreds of years surrounded by constant hate, the sword harvested a power of its own. It is now exceedingly deadly in combat. This fine beautifully crafted blade has been augmented via the master smith Michael of Baldur's Gate to become a force to be reckoned with. The latent cold rage burning deep within the blade's core of this ferocious weapon has been magnified and is the very source of the weapon's magical potency. Drawing from the sword's characteristic magical powers, the master smith has additionally unlocked a tremendous font of protective power that was laying dormant deep within the blade's soul. With such mastery of the craft Michael of Baldur's Gate has reforged this already exquisite weapon into a deadly bulwark that grants the wielder protection against nigh every kind mental deterrence. This instrument of carnage is one of the greatest safeguards in all of FaerÃ»n that one can possess from anything that can hinder one's path of destruction. Only fools or those of brave souls would now dare challenge any swordarm worth their salt wielding this commanding weapon.
+
+STATISTICS:
+
+Equipped Abilities:
+– Grants the wielder immunity to: stun, domination, charm, panic, horror, paralysis, hold, rigid thinking, confusion, sleep, maze, hopelessness, feeblemind, chaos and imprisonment
+– Grants the wielder immunity to all forms of level drain
+– Armor Class: +1
+– Saving Throws: +2
+– Magic Resistance: +15%
+
+THAC0: +3
+Damage: 1d8+3, +2 cold damage
+Damage type: Slashing
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+5 Strength
+
+Weight: 3~
+@210= ~Band of the Missing Page~
+@211= ~Michael of Baldur's Gate is a modest but remarkable smith. He was able to make use even of some broken dragon scales by sensing their power and using their remains to forge a headband usable by anyone.
+
+STATISTICS:
+
+Equipped abilities:
+– THAC0: +2 
+– Critical Hit Chance: +5% 
+- AC Bonus : +1
+
+Charge abilities:
+– Draw Upon Holy Might once per day
+
+Weight: 1~

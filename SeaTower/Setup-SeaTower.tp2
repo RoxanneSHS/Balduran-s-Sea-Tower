@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V0.6~
+VERSION ~V0.7~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -564,3 +564,120 @@ DECOMPILE_AND_PATCH BEGIN
 REPLACE_TEXTUALLY ~"tem2601"~ ~"oltm2601"~
 END
 
+
+BEGIN ~Baldur's Gate Arms and Armour Emporium~
+
+COPY ~SeaTower/emporium/Area~ ~override~
+
+EXTEND_BOTTOM ~%EBaldursGate_BCS%.BCS~ ~SeaTower/scripts/ar0800.baf~ EVALUATE_BUFFER
+
+COPY_EXISTING ~%EBaldursGate%.are~ ~override~
+  LPF fj_are_structure
+    INT_VAR
+    fj_type         = 2
+    fj_box_left     = 2766
+    fj_box_top      = 234
+    fj_box_right    = 2790
+    fj_box_bottom   = 339
+    fj_cursor_idx   = 30
+    fj_vertex_0     = 2766 + (295 << 16)
+    fj_vertex_1     = 2790 + (339 << 16)
+    fj_vertex_2     = 2790 + (269 << 16)
+    fj_vertex_3     = 2766 + (239 << 16)
+    STR_VAR
+    fj_structure_type   = region
+    fj_name             = Emporium
+    fj_destination_area = OL0815
+    fj_destination_name = Exit0800
+  END
+
+  LPF fj_are_structure
+    INT_VAR
+    fj_loc_x       = 2722
+    fj_loc_y       = 345
+    fj_orientation = 2
+    STR_VAR
+    fj_structure_type = entrance
+    fj_name           = Exitol0815
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+COPY_EXISTING ~bg0800.ARE~ ~override~
+  SAY 0x723c @200
+  END ELSE BEGIN
+COPY_EXISTING ~ar0800.ARE~ ~override~
+  SAY 0x723c @200
+END
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+COPY_EXISTING ~ol0815.ARE~ ~override~
+  WRITE_ASCII 0x484 ~BG0800~
+  END ELSE BEGIN
+COPY_EXISTING ~ol0815.ARE~ ~override~
+  WRITE_ASCII 0x484 ~ar0800~
+END
+
+COPY_EXISTING ~%EBaldursGate%.are~ ~override~
+LPF ALTER_AREA_DOOR
+INT_VAR
+bounding_open_left= 2722 
+bounding_open_top= 232 
+bounding_open_right= 2771
+bounding_open_bottom= 299 
+bounding_closed_left= 2765
+bounding_closed_top= 239 
+bounding_closed_right= 2781 
+bounding_closed_bottom= 327
+flag_located= 1
+STR_VAR
+door_name= ~Door Object 15~
+travel_trigger= ~Emporium~
+END
+
+COPY ~SeaTower/emporium/olmichae.cre~ ~override~
+	SAY 0x8 @201
+	SAY 0xC @201
+COPY ~SeaTower/emporium/olmerch1.cre~ ~override~
+	SAY 0x8 @203
+	SAY 0xC @203
+COPY ~SeaTower/emporium/olmerch2.cre~ ~override~
+	SAY 0x8 @203
+	SAY 0xC @203
+COPY ~SeaTower/emporium/olmerch3.cre~ ~override~
+	SAY 0x8 @203
+	SAY 0xC @203
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+COPY_EXISTING ~olmerch2.cre~ ~override~
+WRITE_ASCII 0x2cc ~shop08_~
+END
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+COPY_EXISTING ~olmerch3.cre~ ~override~
+WRITE_ASCII 0x2cc ~shop04_~
+END
+
+COPY ~SeaTower/stores/olbgaae1.STO~ ~override~
+SAY 0xc @202
+
+COPY ~SeaTower/emporium/ohleat51.ITM~ ~override~
+        SAY NAME1 @204
+        SAY NAME2 @204
+	SAY 0x54 @205
+COPY ~SeaTower/emporium/ohleat51.bam~ ~override~
+COPY ~SeaTower/emporium/ohblun51.ITM~ ~override~
+        SAY NAME1 @206
+        SAY NAME2 @206
+	SAY 0x54 @207
+COPY ~SeaTower/emporium/OLSW1H06.ITM~ ~override~
+        SAY NAME1 @208
+        SAY NAME2 @208
+	SAY 0x54 @209
+COPY ~SeaTower/emporium/Stoband2.ITM~ ~override~
+        SAY NAME1 @210
+        SAY NAME2 @210
+	SAY 0x54 @211
+
+COMPILE ~SeaTower/dialogue/OL_Emporium.d~
+COMPILE ~SeaTower/scripts/OL0815.baf~

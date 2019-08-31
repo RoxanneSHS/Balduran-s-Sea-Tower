@@ -1,0 +1,60 @@
+IF
+Global("OLForge","ol0815",1)
+THEN
+RESPONSE #100
+StartCutSceneMode()
+MoveViewObject("Olmichae",5)
+Wait(1)
+CreateVisualEffectObject("spcrtwpn","Olmichae")
+Wait(6)
+EndCutSceneMode()
+SetGlobal("OLForge","ol0815",0)
+END
+
+IF
+Global("OLForge","ol0815",0)
+HasItem("Stoscale","Olmichae")
+THEN
+RESPONSE #100
+ActionOverride("Olmichae",DestroyItem("Stoscale"))
+END
+
+IF
+Global("OLForge","ol0815",0)
+HasItem("chan03","Olmichae")
+THEN
+RESPONSE #100
+ActionOverride("Olmichae",DestroyItem("chan03"))
+END
+
+IF
+Global("OLForge","ol0815",0)
+HasItem("Stoscal2","Olmichae")
+THEN
+RESPONSE #100
+ActionOverride("Olmichae",DestroyItem("Stoscal2"))
+END
+
+IF
+Global("OLForge","ol0815",0)
+HasItem("stoeggs","Olmichae")
+THEN
+RESPONSE #100
+ActionOverride("Olmichae",DestroyItem("stoeggs"))
+END
+
+IF
+Global("OLForge","ol0815",0)
+HasItem("misc12","Olmichae")
+THEN
+RESPONSE #100
+ActionOverride("Olmichae",DestroyItem("misc12"))
+END
+
+IF
+Global("OLForge","ol0815",0)
+HasItem("SW1H06","Olmichae")
+THEN
+RESPONSE #100
+ActionOverride("Olmichae",DestroyItem("SW1H06"))
+END
