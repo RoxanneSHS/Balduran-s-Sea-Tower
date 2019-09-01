@@ -687,5 +687,6 @@ COPY ~SeaTower/emporium/OLBOOT02.ITM~ ~override~
 COPY ~SeaTower/emporium/bams~ ~override~
 
 COMPILE ~SeaTower/dialogue/OL_Emporium.d~
+COMPILE ~SeaTower/dialogue/Sto_EmpHints.d~
 COMPILE ~SeaTower/scripts/OL0815.baf~
 COMPILE ~SeaTower/scripts/STO800T.BAF~
