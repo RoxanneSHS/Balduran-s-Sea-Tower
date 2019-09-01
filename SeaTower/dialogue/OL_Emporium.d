@@ -1,4 +1,6 @@
 BEGIN Olmrch1
+BEGIN Olmerch2
+BEGIN Olmerch3
 BEGIN Olmichae
 
 CHAIN
@@ -13,6 +15,34 @@ IF ~  ReactionLT(LastTalkedToBy(Myself),NEUTRAL_LOWER)~ THEN Olmrch1 Emp2
 ~ 'Ere there. I want's no trouble from you roustabouts. Looks ta me like you wuz probably thrown outta every other bar in town. Well, if you act up, you'll get the same treatment here. Otherwise, welcome. So, what can I do for you?~
 END
 ++~Show me your list of services.~ DO ~StartStore("OLBGAAE1",LastTalkedToBy(Myself))~ EXIT
+++~Nothing.~EXIT
+
+CHAIN
+IF ~  ReactionGT(LastTalkedToBy(Myself),HOSTILE_UPPER) ~ THEN Olmerch2 Emp11
+~ 'Ello, friends. Welcome, and make yourselves at home. Just try not to rattle the locals none, okay? Times is pretty harsh right now, and people don't need any more trouble than they've got. So, what can I do for you?~
+END
+++~Show me your list of services.~ DO ~StartStore("OLBGAAE2",LastTalkedToBy(Myself))~ EXIT
+++~Nothing.~EXIT
+
+CHAIN
+IF ~  ReactionLT(LastTalkedToBy(Myself),NEUTRAL_LOWER)~ THEN Olmerch2 Emp12
+~ 'Ere there. I want's no trouble from you roustabouts. Looks ta me like you wuz probably thrown outta every other bar in town. Well, if you act up, you'll get the same treatment here. Otherwise, welcome. So, what can I do for you?~
+END
+++~Show me your list of services.~ DO ~StartStore("OLBGAAE2",LastTalkedToBy(Myself))~ EXIT
+++~Nothing.~EXIT
+
+CHAIN
+IF ~  ReactionGT(LastTalkedToBy(Myself),HOSTILE_UPPER) ~ THEN Olmerch3 Emp21
+~ 'Ello, friends. Welcome, and make yourselves at home. Just try not to rattle the locals none, okay? Times is pretty harsh right now, and people don't need any more trouble than they've got. So, what can I do for you?~
+END
+++~Show me your list of services.~ DO ~StartStore("OLBGAAE1",LastTalkedToBy(Myself))~ EXIT
+++~Nothing.~EXIT
+
+CHAIN
+IF ~  ReactionLT(LastTalkedToBy(Myself),NEUTRAL_LOWER)~ THEN Olmerch3 Emp22
+~ 'Ere there. I want's no trouble from you roustabouts. Looks ta me like you wuz probably thrown outta every other bar in town. Well, if you act up, you'll get the same treatment here. Otherwise, welcome. So, what can I do for you?~
+END
+++~Show me your list of services.~ DO ~StartStore("OLBGAAE3",LastTalkedToBy(Myself))~ EXIT
 ++~Nothing.~EXIT
 
 CHAIN

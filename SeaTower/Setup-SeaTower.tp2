@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V0.7~
+VERSION ~V0.8~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -650,24 +650,19 @@ COPY ~SeaTower/emporium/olmerch3.cre~ ~override~
 	SAY 0x8 @203
 	SAY 0xC @203
 
-ACTION_IF GAME_IS ~eet~ THEN BEGIN
-COPY_EXISTING ~olmerch2.cre~ ~override~
-WRITE_ASCII 0x2cc ~shop08_~
-END
-
-ACTION_IF GAME_IS ~eet~ THEN BEGIN
-COPY_EXISTING ~olmerch3.cre~ ~override~
-WRITE_ASCII 0x2cc ~shop04_~
-END
-
 COPY ~SeaTower/stores/olbgaae1.STO~ ~override~
+SAY 0xc @202
+
+COPY ~SeaTower/stores/olbgaae2.STO~ ~override~
+SAY 0xc @202
+
+COPY ~SeaTower/stores/olbgaae3.STO~ ~override~
 SAY 0xc @202
 
 COPY ~SeaTower/emporium/ohleat51.ITM~ ~override~
         SAY NAME1 @204
         SAY NAME2 @204
 	SAY 0x54 @205
-COPY ~SeaTower/emporium/ohleat51.bam~ ~override~
 COPY ~SeaTower/emporium/ohblun51.ITM~ ~override~
         SAY NAME1 @206
         SAY NAME2 @206
@@ -680,6 +675,16 @@ COPY ~SeaTower/emporium/Stoband2.ITM~ ~override~
         SAY NAME1 @210
         SAY NAME2 @210
 	SAY 0x54 @211
+COPY ~SeaTower/emporium/OLBOOT01.ITM~ ~override~
+	SAY NAME1 @212
+        SAY NAME2 @212
+	SAY 0x54 @213
+COPY ~SeaTower/emporium/OLBOOT02.ITM~ ~override~
+	SAY NAME1 @214
+        SAY NAME2 @214
+        SAY 0x54 @215
+	
+COPY ~SeaTower/emporium/bams~ ~override~
 
 COMPILE ~SeaTower/dialogue/OL_Emporium.d~
 COMPILE ~SeaTower/scripts/OL0815.baf~
