@@ -3,7 +3,7 @@ Global("StoOtherWay","Sto204",0)
 THEN
 RESPONSE #100
 SetGlobal("StoOtherWay","Sto204",1)
-CreateCreature("Emitar4",[2300.500],3)
+CreateCreature("Emitar2",[2300.500],3)
 END
 
 IF
