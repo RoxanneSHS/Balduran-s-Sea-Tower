@@ -307,4 +307,23 @@ Equipped abilities:
 â€“ Immunity to disease
 
 Weight: 4 lb.~
+@216 =~Flail +2 'The Thresher'~
+@217 =~With one rod of steel and another of bronze, this double-headed flail metes out punishment right and left. The weapon's carved wooden haft depicts scenes of battle in which champions of Helm, each wielding an identical flail; wade through a field of skeletal warriors, threshing them like so much wheat.
+
+STATISTICS:
+
+THAC0: +2, +4 vs. undead
+Damage: 1d6+3, +5 vs. undead
+Damage type: Crushing
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 13 Strength
+
+Weight: 13 lb.~
+@218 =~I just wanna make swords~ [OLMIC1]
+@219 =~I'm feeling awful tired~ [OLMIC2]
+@220 =~I'm working on a sword~ [OLMIC3]
+@221 =~Aaah~ [OLMIC10]
 

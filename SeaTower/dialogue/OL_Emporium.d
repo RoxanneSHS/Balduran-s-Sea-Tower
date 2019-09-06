@@ -35,7 +35,7 @@ CHAIN
 IF ~  ReactionGT(LastTalkedToBy(Myself),HOSTILE_UPPER) ~ THEN Olmerch3 Emp21
 ~ 'Ello, friends. Welcome, and make yourselves at home. Just try not to rattle the locals none, okay? Times is pretty harsh right now, and people don't need any more trouble than they've got. So, what can I do for you?~
 END
-++~Show me your list of services.~ DO ~StartStore("OLBGAAE1",LastTalkedToBy(Myself))~ EXIT
+++~Show me your list of services.~ DO ~StartStore("OLBGAAE3",LastTalkedToBy(Myself))~ EXIT
 ++~Nothing.~EXIT
 
 CHAIN

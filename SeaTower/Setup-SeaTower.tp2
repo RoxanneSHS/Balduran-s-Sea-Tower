@@ -640,6 +640,12 @@ END
 COPY ~SeaTower/emporium/olmichae.cre~ ~override~
 	SAY 0x8 @201
 	SAY 0xC @201
+	SAY INITIAL_MEETING @218
+	SAY TIRED @219
+	SAY SELECT_COMMON1 @220
+	SAY DAMAGE @221
+        SAY DYING @221
+        SAY HURT @221
 COPY ~SeaTower/emporium/olmerch1.cre~ ~override~
 	SAY 0x8 @203
 	SAY 0xC @203
@@ -658,6 +664,9 @@ SAY 0xc @202
 
 COPY ~SeaTower/stores/olbgaae3.STO~ ~override~
 SAY 0xc @202
+
+COPY_EXISTING ~sto0703.sto~ ~override~
+REMOVE_STORE_ITEM ~blun39~
 
 COPY ~SeaTower/emporium/ohleat51.ITM~ ~override~
         SAY NAME1 @204
@@ -683,8 +692,13 @@ COPY ~SeaTower/emporium/OLBOOT02.ITM~ ~override~
 	SAY NAME1 @214
         SAY NAME2 @214
         SAY 0x54 @215
+COPY ~SeaTower/emporium/olblun39.ITM~ ~override~
+        SAY NAME1 @216
+        SAY NAME2 @216
+	SAY 0x54 @217
 	
 COPY ~SeaTower/emporium/bams~ ~override~
+COPY ~SeaTower/emporium/sound~ ~override~
 
 COMPILE ~SeaTower/dialogue/OL_Emporium.d~
 COMPILE ~SeaTower/dialogue/Sto_EmpHints.d~
