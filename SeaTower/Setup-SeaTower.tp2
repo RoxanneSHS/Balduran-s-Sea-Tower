@@ -555,7 +555,7 @@ REPLACE_TEXTUALLY ~FillSlot(SLOT_WEAPON1)~ ~~
 REPLACE_TEXTUALLY ~EquipMostDamagingMelee()~ ~~
 END
 
-COMPILE ~SeaTower/dialogue/OL_Hull.d~
+COMPILE ~SeaTower/dialogue/OL_HullSLS.d~
 
 COPY ~SeaTower/stores/OLTM2601.STO~ ~override~
 
