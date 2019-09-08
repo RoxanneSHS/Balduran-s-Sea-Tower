@@ -1,0 +1,17 @@
+IF
+Global("OL_EEEE_GNOLL_CAVE","%GnollStronghold_TomeCave%",0)
+THEN
+RESPONSE #100
+SetGlobal("OL_EEEE_GNOLL_CAVE","%GnollStronghold_TomeCave%",1)
+CreateCreature("BDBEARCA",[317.217],11)
+CreateCreature("BDBEARCA",[366.222],12)
+CreateCreature("BDBEARCA",[370.180],11)
+ActionOverride("Container1",CreateItem("OLPOTN01",0,0,0))
+ActionOverride("Container1",CreateItem("OLPOTN01",0,0,0))
+ActionOverride("Container1",CreateItem("OLPOTN02",0,0,0))
+ActionOverride("Container1",CreateItem("WAND09",4,0,0))
+ActionOverride("Container1",CreateItem("BLUN36",0,0,0))
+ActionOverride("Container1",CreateItem("SW1H49",0,0,0))
+ActionOverride("Container1",CreateItem("SHLD17",0,0,0))
+ActionOverride("Container1",CreateItem("BDLEAT08",0,0,0))
+END

@@ -1,0 +1,18 @@
+IF
+See([PC])
+!Allegiance(Myself,ENEMY)
+Allegiance("Canto",ENEMY)
+THEN
+RESPONSE #100
+Enemy()
+END
+
+IF
+See([PC])
+!Allegiance(Myself,ENEMY)
+!See("Canto")
+THEN
+RESPONSE #100
+EscapeArea()
+END
+

@@ -1,0 +1,7 @@
+IF
+Die()
+THEN
+RESPONSE #50
+ReallyForceSpellDead(Myself,RED_FIREBALL) 
+END
+

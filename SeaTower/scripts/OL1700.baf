@@ -1,0 +1,9 @@
+IF
+Global("OL_EEEE_DAENNI","%CloakwoodWyverns%",0)
+THEN
+RESPONSE #100
+SetGlobal("OL_EEEE_DAENNI","%CloakwoodWyverns%",1)
+CreateCreature("OLDAENNI",[2623.2953],5)
+CreateCreature("IRONELIT",[2645.2973],6)
+CreateCreature("IRONELIT",[2615.2929],5)
+END

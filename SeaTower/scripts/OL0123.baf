@@ -1,0 +1,16 @@
+IF
+Global("OL_EEEE_UMBERS","%Undercity%",0)
+THEN
+RESPONSE #100
+SetGlobal("OL_EEEE_UMBERS","%Undercity%",1)
+ActionOverride("Container1",DestroyItem("PLAT24"))
+ActionOverride("Container1",CreateItem("MISC82",0,0,0))
+ActionOverride("Container1",CreateItem("RNDTRE08",0,0,0))
+ActionOverride("Container1",CreateItem("RNDTRI03",0,0,0))
+CreateCreature("OLSKEL1W",[555.1088],12)
+CreateCreature("OLSKEL2M",[570.1136],12)
+CreateCreature("OLSKEL3M",[607.1187],12)
+CreateCreature("OLSKEL4C",[517.1153],12)
+CreateCreature("OLSKEL5C",[655.1116],13)
+CreateCreature("OLSKEL6G",[630.1235],11)
+END

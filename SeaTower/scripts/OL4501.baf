@@ -1,0 +1,20 @@
+IF
+Global("OL_EEEE_FIRE_DRAKE","%CloakwoodWyverns_WyvernCave%",0)
+THEN
+RESPONSE #100
+SetGlobal("OL_EEEE_FIRE_DRAKE","%CloakwoodWyverns_WyvernCave%",1)
+CreateCreature("OLFDRAKE",[285.285],7)
+CreateCreature("WYVERNBI",[530.700],4)
+CreateCreature("WYVERNBI",[737.737],6)
+CreateCreature("WYVERN",[680.300],4)
+ActionOverride("Container1",DestroyItem("PLAT01"))
+ActionOverride("Container1",CreateItem("OLPOTN01",0,0,0))
+ActionOverride("Container1",CreateItem("OLPOTN01",0,0,0))
+ActionOverride("Container1",CreateItem("OLPOTN01",0,0,0))
+ActionOverride("Container1",CreateItem("OLPOTN02",0,0,0))
+ActionOverride("Container1",CreateItem("CHAN12",0,0,0))
+ActionOverride("Container1",CreateItem("SW1H47",0,0,0))
+ActionOverride("Container1",CreateItem("BLUN15",0,0,0))
+ActionOverride("Container1",CreateItem("OLDART01",0,0,0))
+ActionOverride("Container1",CreateItem("OLRING05",0,0,0))
+END

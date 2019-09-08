@@ -704,3 +704,78 @@ COMPILE ~SeaTower/dialogue/OL_Emporium.d~
 COMPILE ~SeaTower/dialogue/Sto_EmpHints.d~
 COMPILE ~SeaTower/scripts/OL0815.baf~
 COMPILE ~SeaTower/scripts/STO800T.BAF~
+
+BEGIN ~Extra Encounters~
+
+COPY ~SeaTower/creatures/OLBIMMY.cre~ ~override~
+	SAY 0x8 @222
+	SAY 0xC @222
+COPY ~SeaTower/creatures/OLMELIAQ.cre~ ~override~
+	SAY 0x8 @225
+	SAY 0xC @225
+COPY ~SeaTower/creatures/OLSKEL1W.cre~ ~override~
+	SAY 0x8 @228
+	SAY 0xC @228
+COPY ~SeaTower/creatures/OLSKEL2M.cre~ ~override~
+	SAY 0x8 @229
+	SAY 0xC @229
+COPY ~SeaTower/creatures/OLSKEL3M.cre~ ~override~
+	SAY 0x8 @230
+	SAY 0xC @230
+COPY ~SeaTower/creatures/OLSKEL4C.cre~ override
+	SAY 0x8 @231
+	SAY 0xC @231
+COPY ~SeaTower/creatures/OLSKEL5C.cre~ override
+	SAY 0x8 @232
+	SAY 0xC @232
+COPY ~SeaTower/creatures/OLSKEL6G.cre~ override
+	SAY 0x8 @233
+	SAY 0xC @233
+COPY ~SeaTower/creatures/OLDAENNI.cre~ override
+	SAY 0x8 @234
+	SAY 0xC @234
+COPY ~SeaTower/creatures/OLFDRAKE.cre~ override
+	SAY 0x8 @241
+	SAY 0xC @241
+
+COMPILE ~SeaTower/scripts/OLBimmy.baf~
+COMPILE ~SeaTower/scripts/OLuskel1.baf~
+COMPILE ~SeaTower/dialogue/OL_Assasins.d~
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR4501.ARE~ ~override~
+  WRITE_ASCII 0x94 ~AR4501~ #8
+  BUT_ONLY
+END
+
+EXTEND_BOTTOM ~%LonelyPeaks_BCS%.BCS~ ~SeaTower/scripts/OL4400.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%CoastWay_BCS%.BCS~ ~SeaTower/scripts/OL2800.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Undercity_BCS%.BCS~ ~SeaTower/scripts/OL0123.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%CloakwoodWyverns_BCS%.BCS~ ~SeaTower/scripts/OL1700.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%CloakwoodWyverns_WyvernCave_BCS%.BCS~ ~SeaTower/scripts/OL4501.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%GnollStronghold_TomeCave_BCS%.BCS~ ~SeaTower/scripts/OL5102.BAF~ EVALUATE_BUFFER
+
+COPY ~SeaTower/emporium/olbow11.ITM~ ~override~
+        SAY NAME1 @223
+        SAY NAME2 @223
+	SAY 0x54 @224
+COPY ~SeaTower/emporium/olring06.ITM~ ~override~
+        SAY NAME1 @226
+        SAY NAME2 @226
+	SAY 0x54 @227
+COPY ~SeaTower/emporium/OLFDRAK1.ITM~ ~override~
+COPY ~SeaTower/emporium/OLFDRAK2.ITM~ ~override~
+COPY ~SeaTower/emporium/OLFDSCAL.ITM~ ~override~
+        SAY NAME1 @235
+        SAY NAME2 @235
+	SAY 0x54 @236
+COPY ~SeaTower/emporium/OLDart01.ITM~ ~override~
+        SAY NAME1 @237
+        SAY NAME2 @237
+	SAY 0x54 @238
+COPY ~SeaTower/emporium/OLRing05.ITM~ ~override~
+        SAY NAME1 @239
+        SAY NAME2 @239
+	SAY 0x54 @240
+
+COPY ~SeaTower/emporium/bams~ ~override~
