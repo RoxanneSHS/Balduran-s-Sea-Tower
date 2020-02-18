@@ -15,7 +15,7 @@ Wait(1)
 SetGlobal("OL_knight_quest","GLOBAL",1)
 AddexperienceParty(1500)
 EraseJournalEntry(27213)
-Wait(1)
+Wait(2)
 AddJournalEntry(@1001,QUEST)~EXIT
 END
 

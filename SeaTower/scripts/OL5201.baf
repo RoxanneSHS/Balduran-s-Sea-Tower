@@ -17,3 +17,15 @@ THEN
     CreateCreature("OLKNHTG6",[686.974],S)
     SetGlobal("OL_EEEE_KNHTS","%FirewineRuins%",1)
 END
+
+IF
+Global("OL_knight_quest","GLOBAL",1)
+Global("OL_Jour_KNHTS","%FirewineRuins%",0)
+THEN
+RESPONSE #100
+SetGlobal("OL_Jour_KNHTS","%FirewineRuins%",1)
+EraseJournalEntry(227213)
+EraseJournalEntry(27213)
+Wait(2)
+AddJournalEntry(@1001,QUEST)
+END
