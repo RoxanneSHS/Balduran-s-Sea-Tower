@@ -515,7 +515,7 @@ COPY ~SeaTower/creatures/OLKNHTU.cre~ override
 	SAY 0xC @116
 	WRITE_ASCII 0x2cc ~KNIGHTSK~
 
-EXTEND_BOTTOM ~%FirewineRuins_BCS%.BCS~ ~SeaTower/scripts/OL5201.BAF~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%FirewineRuins_BCS%.BCS~ ~SeaTower/scripts/OL5201.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
 
 COPY_EXISTING ~%FirewineRuins%.ARE~ ~override~
 	LPF ALTER_AREA_ACTOR STR_VAR
