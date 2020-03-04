@@ -71,6 +71,13 @@ IF~PartyHasItem("Stoscale")~THEN REPLY~Can you use these dragon scales for a pur
 IF~PartyHasItem("Stoscal2")~THEN REPLY~Can you use these broken dragon scales for a purpose?~ + scalesB1
 IF~PartyHasItem("Stoeggs")~THEN REPLY~Can you use these dragon eggs for a purpose?~ + eggs1
 IF~PartyHasItem("SW1H06")~THEN REPLY~Is there a way to make this Varscona better?~ + Varscona1
+IF~Global("OLSmithBuildsPersonalWeapon","Locals",0)~THEN REPLY~I'd like to commission work for some enhanced equipment.~ + Selforge
+IF ~  GlobalTimerExpired("OLBuildingTimer","Locals") Global("OLSmithBuildsPersonalWeapon","Locals",1)~ THEN REPLY~Is my commission ready?~ + SelforgeYes
+IF ~  GlobalTimerNotExpired("OLBuildingTimer","Locals") Global("OLSmithBuildsPersonalWeapon","Locals",1)~ THEN REPLY~Is my commission ready?~ + SelforgeNo
+
+CHAIN
+IF~~THEN Olmichae SelforgeNo
+~I ain't done yet, and it won't be gittin' any closer ta bein' ferged if ya don't leave me 'lone.~ EXIT
 
 CHAIN
 IF~~THEN Olmichae Getlost
@@ -116,3 +123,104 @@ IF~PartyGoldGT(8999) PartyHasItem("POTN04")~THEN REPLY~I have those things right
 CHAIN
 IF ~~ THEN Olmichae Later
 ~My fires are blazing night 'n' day. Come back whenever you like.~EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge
+~I can be doing a swerd, axe, or flail fer ya. Ya can pay me 4000 gold plus expenses. Wut kind of a weapon ya want?~
+END
+++~A sword.~ + Selforge6
+++~An axe.~ + Selforge7
+++~A flail.~ + Selforge8
+++~A halberd.~ + Selforge9
+++~Just a small dagger please.~ + Selforge10
+++~Can you please make me a warhammer?~ + Selforge11
+++~How about a spear?~ + Selforge12
+++~Are you any good at crafting armor?~ + Selforge13
+
+CHAIN
+IF ~~ THEN Olmichae Selforge6 
+~A swerd is somethin' no warria should be withot. I'll be fergin' ye one, jus as long as ye be payin' me.~
+DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1) SetGlobal("OLSword","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge7 
+~A waraxe is my choice in a weapen. I'll be fergin' ye one, jus as long as ye be payin' me.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1) SetGlobal("OLAxe","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS)~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge8 
+~A 'eavy flail is somethin' quite dangrous in the 'ands of a skilled warrior. I'll be fergin' ye one, jus as long as ye be payin' me.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)
+SetGlobal("OLFlail","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge9 
+~A long 'alb'd is somethin' ye look good at. I'll be fergin' ye one, jus as long as ye be payin' me.~DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)  SetGlobal("OLHalberd","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge10 
+~A small dagga?  That's yer choice. I'll be fergin' ye one, jus as long as ye be payin' me.~DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1) SetGlobal("OLDagger","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge11
+~A war'amma be my choice of a weapen. I'll be fergin' ye one, jus as long as ye be payin' me.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)SetGlobal("OLWarhammer","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge12
+~A shap sper be good fer skewe'in' wil' orcs. I'll be fergin' ye one, jus as long as ye be payin' me.~DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)  SetGlobal("OLSpear","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",TWO_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge13 ~Jus as long as ya gots gold. Wut kind of arma ya lookin' fer?~
+END
+++~Plate mail.~ + Selforge14
+++~Chain mail.~ + Selforge15
+++~Splint.~ + Selforge16
+++~I'd like a shield.~ + Selforge17
+
+CHAIN
+IF ~~ THEN Olmichae Selforge14 
+~A sturdie suit of plate it is then.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1) SetGlobal("OLPlate","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",THREE_DAYS)~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge15
+~A decent suit of chain I'll be forgin' fer ya then.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)
+SetGlobal("OLChain","LOCALS",1)SetGlobalTimer("OLBuildingTimer","Locals",THREE_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge16 
+~I can be forgin' ya up some splint mail.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)
+SetGlobal("OLSplint","LOCALS",1) SetGlobalTimer("OLBuildingTimer","Locals",THREE_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae Selforge17
+~Jus' a shild?  Shure, I can be doin' that fer ya.~ DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",1)
+SetGlobal("OLShield","LOCALS",1)SetGlobalTimer("OLBuildingTimer","Locals",THREE_DAYS) ~ 
+=~I's be gittin' ta work.  Come see me in a few days.  It'll be ready.~ EXIT
+
+CHAIN
+IF ~~ THEN Olmichae SelforgeYes
+~Aye, I finished up the fergin'.  'ere, take a look.~
+END
+IF ~  Global("OLSword","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("sw1h27",LastTalkedToBy(Myself),1,0,0) TakePartyGold(10000)DestroyGold(10000) ~ EXIT
+IF ~  Global("OLAxe","LOCALS",1)~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("ax1h11",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000)DestroyGold(6000) ~ EXIT
+IF ~  Global("OLFlail","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)
+GiveItemCreate("blun39",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000) DestroyGold(6000)~ EXIT
+IF ~  Global("OLHalberd","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)GiveItemCreate("halb07",LastTalkedToBy(Myself),1,0,0)TakePartyGold(8000) DestroyGold(8000) ~ EXIT
+IF ~  Global("OLDagger","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("dagg11",LastTalkedToBy(Myself),1,0,0)  TakePartyGold(5000) DestroyGold(5000) ~ EXIT
+IF ~  Global("OLWarhammer","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("hamm13",LastTalkedToBy(Myself),1,0,0)TakePartyGold(5000)  DestroyGold(5000) ~ EXIT
+IF ~  Global("OLSpear","LOCALS",1)  ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("sper06",LastTalkedToBy(Myself),1,0,0) TakePartyGold(10000) DestroyGold(10000) ~ EXIT
+IF ~  Global("OLPlate","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("plat14",LastTalkedToBy(Myself),1,0,0) TakePartyGold(7000) DestroyGold(7000) ~ EXIT
+IF ~  Global("OLChain","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)GiveItemCreate("chan13",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000) DestroyGold(6000) ~ EXIT
+IF ~  Global("OLSplint","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("chan05",LastTalkedToBy(Myself),1,0,0) TakePartyGold(4000)DestroyGold(4000) ~ EXIT
+IF ~  Global("OLShield","LOCALS",1)~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",2)GiveItemCreate("SHLD53",LastTalkedToBy(Myself),1,0,0) TakePartyGold(5000) DestroyGold(5000) ~ EXIT
+
+
+
