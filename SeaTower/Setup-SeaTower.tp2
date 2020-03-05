@@ -708,7 +708,20 @@ COPY_EXISTING ~ax1h11.itm~ ~override/oax1h11.itm~
 COPY_EXISTING ~sw1h27.itm~ ~override/osw1h27.itm~
  	SAY 0xc @248
  	SAY 0x54 @249
-	
+COPY_EXISTING ~dagg11.itm~ ~override/odagg11.itm~
+ 	SAY 0xc @250
+ 	SAY 0x54 @251
+COPY_EXISTING ~hamm13.itm~ ~override/ohamm13.itm~
+ 	SAY 0xc @252
+ 	SAY 0x54 @253
+ 	
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~shld53.itm~ THEN BEGIN
+COPY ~SeaTower/emporium/shld53.ITM~ ~override~
+        SAY NAME1 @254
+        SAY NAME2 @255
+	SAY 0x54 @256
+END
+
 COPY ~SeaTower/emporium/bams~ ~override~
 COPY ~SeaTower/emporium/sound~ ~override~
 

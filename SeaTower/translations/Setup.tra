@@ -449,3 +449,54 @@ Requires:
  5 Strength
 
 Weight: 2~
+@250 =~Boomerang Dagger~
+@251 =~Michael of Baldur's Gate learned from his dwarven friends how to create items with the abilities of the famous Fullen Boomerang daggers.
+
+STATISTICS:
+
+Combat abilities:
+– Returns to the wielder's hand when thrown
+
+THAC0: +2
+Damage: 2d4+2
+Damage type (melee): Piercing
+Damage type (thrown): Missile
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@252 =~<CHARNAME>'s Hammer~
+@253 =~Crafted by Michael of Baldur's Gate, this warhammer sometimes channels the power of the ancient wyrm's mighty wings that might have been used when the famous smith created the weapon for <CHARNAME>.
+STATISTICS:
+
+Combat abilities:
+– 10% chance per hit target is knocked back as if struck by a wing buffet
+
+Equipped abilities:
+– The wearer's non-detectable by magical means such as Detect Invisibility and Scrying
+
+THAC0: +1
+Damage: 1d4+2 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+@254 =~Medium Shield~
+@255 =~<CHARNAME>'s Shield~
+@256 =~A medium shield is carried in the same manner as a small shield. Unlike the small shield, however, its weight prevents the character from using his shield hand for anything other than carrying the medium shield. Medium shields are usually made of metal, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward.
+
+STATISTICS:
+
+Equipped abilities:
+ Armor Class: +3
+
+Requires:
+ 12 Strength
+
+Weight: 6~

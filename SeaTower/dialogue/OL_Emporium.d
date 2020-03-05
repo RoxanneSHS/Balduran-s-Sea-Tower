@@ -214,8 +214,8 @@ IF ~  Global("OLAxe","LOCALS",1)~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapo
 IF ~  Global("OLFlail","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)
 GiveItemCreate("oblun39",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000) DestroyGold(6000)~ EXIT
 IF ~  Global("OLHalberd","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)GiveItemCreate("ohalb07",LastTalkedToBy(Myself),1,0,0)TakePartyGold(8000) DestroyGold(8000) ~ EXIT
-IF ~  Global("OLDagger","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("dagg11",LastTalkedToBy(Myself),1,0,0)  TakePartyGold(5000) DestroyGold(5000) ~ EXIT
-IF ~  Global("OLWarhammer","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("hamm13",LastTalkedToBy(Myself),1,0,0)TakePartyGold(5000)  DestroyGold(5000) ~ EXIT
+IF ~  Global("OLDagger","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("odagg11",LastTalkedToBy(Myself),1,0,0)  TakePartyGold(5000) DestroyGold(5000) ~ EXIT
+IF ~  Global("OLWarhammer","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("0hamm13",LastTalkedToBy(Myself),1,0,0)TakePartyGold(5000)  DestroyGold(5000) ~ EXIT
 IF ~  Global("OLSpear","LOCALS",1)  ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("sper06",LastTalkedToBy(Myself),1,0,0) TakePartyGold(10000) DestroyGold(10000) ~ EXIT
 IF ~  Global("OLPlate","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("plat14",LastTalkedToBy(Myself),1,0,0) TakePartyGold(7000) DestroyGold(7000) ~ EXIT
 IF ~  Global("OLChain","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)GiveItemCreate("chan13",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000) DestroyGold(6000) ~ EXIT
