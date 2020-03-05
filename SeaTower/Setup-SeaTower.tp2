@@ -696,6 +696,18 @@ COPY ~SeaTower/emporium/olblun39.ITM~ ~override~
         SAY NAME1 @216
         SAY NAME2 @216
 	SAY 0x54 @217
+COPY_EXISTING ~blun39.itm~ ~override/oblun39.itm~
+ 	SAY 0xc @242
+ 	SAY 0x54 @243
+COPY_EXISTING ~halb07.itm~ ~override/ohalb07.itm~
+ 	SAY 0xc @244
+ 	SAY 0x54 @245
+COPY_EXISTING ~ax1h11.itm~ ~override/oax1h11.itm~
+ 	SAY 0xc @246
+ 	SAY 0x54 @247
+COPY_EXISTING ~sw1h27.itm~ ~override/osw1h27.itm~
+ 	SAY 0xc @248
+ 	SAY 0x54 @249
 	
 COPY ~SeaTower/emporium/bams~ ~override~
 COPY ~SeaTower/emporium/sound~ ~override~

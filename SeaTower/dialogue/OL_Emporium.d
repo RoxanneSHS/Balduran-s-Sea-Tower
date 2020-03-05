@@ -209,11 +209,11 @@ CHAIN
 IF ~~ THEN Olmichae SelforgeYes
 ~Aye, I finished up the fergin'.  'ere, take a look.~
 END
-IF ~  Global("OLSword","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("sw1h27",LastTalkedToBy(Myself),1,0,0) TakePartyGold(10000)DestroyGold(10000) ~ EXIT
-IF ~  Global("OLAxe","LOCALS",1)~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("ax1h11",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000)DestroyGold(6000) ~ EXIT
+IF ~  Global("OLSword","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("osw1h27",LastTalkedToBy(Myself),1,0,0) TakePartyGold(10000)DestroyGold(10000) ~ EXIT
+IF ~  Global("OLAxe","LOCALS",1)~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("oax1h11",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000)DestroyGold(6000) ~ EXIT
 IF ~  Global("OLFlail","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)
-GiveItemCreate("blun39",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000) DestroyGold(6000)~ EXIT
-IF ~  Global("OLHalberd","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)GiveItemCreate("halb07",LastTalkedToBy(Myself),1,0,0)TakePartyGold(8000) DestroyGold(8000) ~ EXIT
+GiveItemCreate("oblun39",LastTalkedToBy(Myself),1,0,0) TakePartyGold(6000) DestroyGold(6000)~ EXIT
+IF ~  Global("OLHalberd","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0)GiveItemCreate("ohalb07",LastTalkedToBy(Myself),1,0,0)TakePartyGold(8000) DestroyGold(8000) ~ EXIT
 IF ~  Global("OLDagger","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("dagg11",LastTalkedToBy(Myself),1,0,0)  TakePartyGold(5000) DestroyGold(5000) ~ EXIT
 IF ~  Global("OLWarhammer","LOCALS",1) ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("hamm13",LastTalkedToBy(Myself),1,0,0)TakePartyGold(5000)  DestroyGold(5000) ~ EXIT
 IF ~  Global("OLSpear","LOCALS",1)  ~ THEN DO ~SetGlobal("OLSmithBuildsPersonalWeapon","Locals",0) GiveItemCreate("sper06",LastTalkedToBy(Myself),1,0,0) TakePartyGold(10000) DestroyGold(10000) ~ EXIT

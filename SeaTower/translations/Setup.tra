@@ -386,3 +386,66 @@ STATISTICS:
 Equipped Abilities:
 - Melee THAC0: +3~
 @241 =~Fire Drake~
+@242 =~<CHARNAME>'s Flail~
+@243 =~With one rod of steel and another of bronze, this double-headed flail metes out punishment right and left. The weapon's carved wooden haft depicts scenes of battle in which <CHARNAME> wade through a field of orcs, threshing them like so much wheat. The weapon was forged by Michael of Baldur's Gate.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d6+3 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 13 Strength
+
+Weight: 13~
+@244 =~<CHARNAME>'s Halberd~
+@245 =~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. Magic has been used by Michael of Baldur's Gate to forge this particular weapon for <CHARNAME> gifting it with enhanced abilities to slaughter foes.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d10+2 (piercing)
+Speed Factor: 7
+Proficiency Type: Halberd
+Type: Two-handed
+Requires:
+ 13 Strength
+
+Weight: 12~
+@246 =~<CHARNAME>'s Axe~
+@247 =~This magical axe has been forged by Michael of Baldur's Gate for <CHARNAME>.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+@248 =~<CHARNAME>'s Short Sword~
+@249 =~One of many created in the name of the mage who first discovered how to enchant a blade in this manner, this replica of the weapon of the outlaw Garno was forged by Michael of Baldur's Gate for <CHARNAME>.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to hold and paralysis
+
+Charge abilities:
+– Haste once per day
+  Duration: 2 rounds
+
+THAC0: +2
+Damage: 1d6+2 (piercing)
+Speed Factor: 1
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
