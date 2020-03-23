@@ -257,15 +257,14 @@ Weight: 3~
 STATISTICS:
 
 THAC0: +3
-Damage: 1d8+3, +2 cold damage
-Damage type: Slashing
+Damage: 1d8+3 (slashing)
 Speed Factor: 2
 Proficiency Type: Long Sword
 Type: One-handed
 Requires:
-5 Strength
+ 6 Strength
 
-Weight: 3~
+Weight: 2~
 @210= ~Band of the Missing Page~
 @211= ~Michael of Baldur's Gate is a modest but remarkable smith. He was able to make use even of some broken dragon scales by sensing their power and using their remains to forge a headband usable by anyone.
 
