@@ -571,6 +571,10 @@ COPY ~SeaTower/emporium/Area~ ~override~
 
 EXTEND_BOTTOM ~%EBaldursGate_BCS%.BCS~ ~SeaTower/scripts/ar0800.baf~ EVALUATE_BUFFER
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~sw1h27.itm~ THEN BEGIN
+COPY ~SeaTower/items/sw1h27.itm~ ~override~
+END
+
 COPY_EXISTING ~%EBaldursGate%.are~ ~override~
   LPF fj_are_structure
     INT_VAR
