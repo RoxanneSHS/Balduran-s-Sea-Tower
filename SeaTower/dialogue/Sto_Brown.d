@@ -1,156 +1,156 @@
 CHAIN
 IF~Global("Sto_Dragon","Global",0) ~ THEN Stoflund TalkBrown1
-~I heard her again last night, believe me. She is calling us!~
+@0
 DO~SetGlobal("Sto_Dragon","Global",1)~
 END
-++~Get lost, fisherman, you're drunk, you hear voices already.~ + TalkBrown2
-++~Who is calling, Umberlee?~ + TalkBrown2
-++~What do you hear, beware it might be a sirene trying to charm you.~ + TalkBrown2
+++@1 + TalkBrown2
+++@2 + TalkBrown2
+++@3 + TalkBrown2
 
 CHAIN
 IF~~ THEN Stoflund TalkBrown2
-~Hey, I'm not telling you any tales, <PRO_MANWOMAN>. You look like adventurers the way you're geared up. You must have heard stranger tales than I tell you now and maybe faced stronger challenges.~
-=~SHE isn't fiction, she's real.~
-=~I'm talking about a dragon, you hear me?~
+@4
+=@5
+=@6
 END
-++~A dragon in a dungeon below an old castle? Have I heard such a thing before?~+ TalkBrown3
-++~Now you got me interested, fisher man.~ + TalkBrown3
-++~Tell your tale and try to stick to facts.~ + TalkBrown3
-++~Yawn, I'm not even listening anymore.~ + TalkBrown3
+++@7+ TalkBrown3
+++@8 + TalkBrown3
+++@9 + TalkBrown3
+++@10 + TalkBrown3
 
 CHAIN
 IF~~ THEN Stoflund TalkBrown3
-~On your journeys you might have heard of skull dragons, some call them black dragons as well.~
-==BDCorwiJ IF~InParty("Corwin")~THEN~There were some reports about one having been spotted at the mouth of River Chionthar a few tendays ago, <CHARNAME>, there may be truth in this man's words.~
-==Stoflund IF~!InParty("CVSandr")~THEN~These dragons are aquatic creatures that live in sea and swamps and they feed on fish, shellfish and a tad of red meat from terrestrial creatures. And there was one at the mouth of River Chionthar a while ago.~
+@11
+==BDCorwiJ IF~InParty("Corwin")~THEN@12
+==Stoflund IF~!InParty("CVSandr")~THEN@13
 END
-++~Be that as it may, what does it have to do with us?~ + TalkBrown4
-++~Why does that interest you at all?~ + TalkBrown4
+++@14 + TalkBrown4
+++@15 + TalkBrown4
 
 CHAIN
 IF~~ THEN Stoflund TalkBrown4
-~Maybe she got chased out her swamp by a rival female that took here mate, but she came here and must have nested in the flooded parts of the lower tower dungeons. But with those strange recent activities that disturb the caves and cellars something must have cut off her exits.~
-=~She's probably trapped down there. That's why I hear her trying to call me with some magic.~
+@16
+=@17
 END
-++~A trapped black dragon may not be dangerous but lucrative to kill.~ + TalkBrown5
-++~Those are powerful beings and not dumb. Maybe we can make a deal with her for whatever she can give us for her freedom.~ + TalkBrown5
-++~Let her stay there, we have more urgent things to do.~ + TalkBrown5
+++@18 + TalkBrown5
+++@19 + TalkBrown5
+++@20 + TalkBrown5
 
 CHAIN
 IF~~ THEN Stoflund TalkBrown5
-~Deal with it as you like, <PRO_SIRMAAM>, I'd prefer some peaceful end. I can live with her and what share she takes from the fish and shells just like me. I can't live with her moaning and knowing she suffers.~
-=~I'll be at my house over there in the east outside the tower walls.~
+@21
+=@22
 DO~AddJournalEntry(@1008,QUEST) Wait(1) MoveToPointNoInterrupt([4473.2148])~ EXIT
 
 CHAIN
 IF~GlobalGT("StoDragonspell","Global",4) Global("StoDone","Locals",0)~THEN Stoflund TalkFin1
-~Her calling has stopped. I can sleep again. Whatever you did, adventurers, we are rid of the dragon.~
+@23
 DO~SetGlobal("StoDone","Locals",1)~
 END
-IF~Dead("stodrago")~THEN REPLY~We solved it in a heroic way, man, the beast is dead.~+ TalkFin2
-IF~Global("StoDragonspell","Global",5)~THEN REPLY~We have set the dragon free. Her name was Ueurwen and she may now be in some remote cave somewhere along the Sword Coast.~ + TalkFin3
-++~Yes, we did our job, as usual, you may sleep in ignorance.~ + TalkFin4
+IF~Dead("stodrago")~THEN REPLY@24+ TalkFin2
+IF~Global("StoDragonspell","Global",5)~THEN REPLY@25 + TalkFin3
+++@26 + TalkFin4
 
 CHAIN
 IF~~THEN Stoflund TalkFin2
-~You may consider yourself a hero but I can't see anything heroic in your deed. It just proves you consider limited options and have a big sword.~DO~EscapeArea()~EXIT
+@27DO~EscapeArea()~EXIT
 
 CHAIN
 IF~~THEN Stoflund TalkFin3
-~This is good to hear. She did no wrong, she was just in the wrong place down there. If you ever feel like taking a cruise around here, my boat will serve you. Farewell.~DO~SetGlobal("StoDone","Locals",2)~EXIT
+@28DO~SetGlobal("StoDone","Locals",2)~EXIT
 
 CHAIN
 IF~~THEN Stoflund TalkFin4
-~Thanks anyway. Whatever reason you had, I have my peace now. Not that I like you any better for it...~DO~EscapeArea()~EXIT
+@29DO~EscapeArea()~EXIT
 
 CHAIN
 IF~Global("StoDragonspell","Global",0)~THEN Stodrago NotWelc1
-~It is time you came, however-you-call-yourself.~
+@30
 DO~SetGlobal("StoDragonspell","Global",1)~
 END
-++~My name is <CHARNAME>, a pleasure to meet a wise ancient creature like you.~+ NotWelc2
-IF~Global("Sto_Dragon","Global",1)~THEN REPLY~My name is <CHARNAME>. I heard of you outside and learned you may be in some trouble.~+ NotWelc2
-IF~Global("Sto_Dragon","Global",1)~THEN REPLY~My name is not important and you are in no condition to make demands. I heard of you outside and know you are in some trouble.~ + NotWelc3
-++~It seems you can't await your own death, wyrm.~+ NotWelc3
+++@31+ NotWelc2
+IF~Global("Sto_Dragon","Global",1)~THEN REPLY@32+ NotWelc2
+IF~Global("Sto_Dragon","Global",1)~THEN REPLY@33 + NotWelc3
+++@34+ NotWelc3
 
 CHAIN
 IF~~THEN Stodrago NotWelc3
-~Hold your tongue! In another time, you would have encountered my tooth and claw instead of words! But...you're right, I require outside help.~ EXTERN Stodrago NotWelc4
+@35 EXTERN Stodrago NotWelc4
 
 CHAIN
 IF~~THEN Stodrago NotWelc2
-~I'm sure you do, but flattery is not why I allow you to talk to me. I require outside help.~ EXTERN Stodrago NotWelc4
+@36 EXTERN Stodrago NotWelc4
 
 CHAIN
 IF~~THEN Stodrago NotWelc4
-~I demand your service and it will not be your loss to listen carefully. I am Ueurwen, the Black, the reason why I dwell down here is not your concern.~
-=~The recent diggings by slaves of those brain eaters in the caves around have blocked my passage to the sea outside. It is not urgent for me to leave, there is food here enough but it's very unpleasant to be caught against MY will.~
+@37
+=@38
 END
-++~What is there I could possibly do about that?~ + NotWelc5
-++~I can't dig a passage for a dragon to pass through and our magic has no means for it either.~ + NotWelc5
-++~You need not worry to get out. This will be your grave.~DO~EraseJournalEntry(@1008) ENEMY()~EXIT
+++@39 + NotWelc5
+++@40 + NotWelc5
+++@41DO~EraseJournalEntry(@1008) ENEMY()~EXIT
 
 CHAIN
 IF~~THEN Stodrago NotWelc5
-~Silence! I will tell you when you may speak. This is a VERY important matter, and I will not be interrupted, bah, adventurers. You stumble blindly through these dungeons and know not the basics.~
-=~Use magic. We need teleportation. Outside is a city, you - even you - should be able to find some teleportation scroll out there.~
+@42
+=@43
 END
-++~I may do so but my service will not be for free.~ + NotWelc6
-++~Impertinent as you are I may still do what you request - for a price.~ + NotWelc6
-++~Enough of your insolence, I will do nothing for you. Find yourself another fool.~EXIT
-++~Wyrm, I don't need to do your errands to grab your treasures.~ + NotWelc6
+++@44 + NotWelc6
+++@45 + NotWelc6
+++@46EXIT
+++@47 + NotWelc6
 
 CHAIN
 IF~~THEN Stodrago NotWelc6
-~See, adventurer, the treasure is with my eggs that are protected by acid. Try to steal it and die. Only I can give it to you. I give you some scales as well, a learned smith could do wonders with them. Attack me and all you wil find is death.~
+@48
 END
-++~We will come back with a scroll and you hold your word.~DO~AddJournalEntry(@1015,QUEST)~+ NotWelc7
-++~Enough of your insolence, I will do nothing for you. Find yourself another fool.~EXIT
-++~We have a deal, Ueurwen. I'll be back.~ DO~AddJournalEntry(@1015,QUEST)~+ NotWelc7
-++~Your kin is known for deceit, I have no reason to trust you, but I'll take your scales and your treasure by force.~DO~EraseJournalEntry(@1008) ENEMY()~EXIT
+++@49DO~AddJournalEntry(@1015,QUEST)~+ NotWelc7
+++@46EXIT
+++@50 DO~AddJournalEntry(@1015,QUEST)~+ NotWelc7
+++@51DO~EraseJournalEntry(@1008) ENEMY()~EXIT
 
 CHAIN
 IF~~THEN Stodrago NotWelc7
-~You're less dumb than I anticipated. Take this as a sign of our deal.~DO~GiveItemCreate("misc44",Player1,0,0,0)~EXIT
+@52DO~GiveItemCreate("misc44",Player1,0,0,0)~EXIT
 
 CHAIN
 IF~Global("StoDragonspell","Global",1) GlobalLT("Sto_Dragon","Global",2)PartyHasItem("Scrl6q")~THEN Stodrago TooWeak1
-~I can see by that self-confident expression you wear that you found a solution?~
+@53
 DO~SetGlobal("Sto_Dragon","Global",2)~
 END
-++~Fulfil your part of the bargain and I give you the scroll.~ +TooWeak2
-++~Your kin is known for deceit, I have no reason to trust you, but I'll take your scales and your treasure by force.~DO~EraseJournalEntry(@1008) ENEMY()~EXIT
+++@54 +TooWeak2
+++@51DO~EraseJournalEntry(@1008) ENEMY()~EXIT
 
 CHAIN
 IF~~THEN Stodrago TooWeak2
-~You will find everything that I promised you here in my lair when I'm gone. Take what you want from it.~DO~SetGlobal("StoFailed","sto205",1) TakePartyItemNum("Scrl6q",1) Wait(1) CreateVisualEffectObject("SPSump",Myself)~EXIT
+@55DO~SetGlobal("StoFailed","sto205",1) TakePartyItemNum("Scrl6q",1) Wait(1) CreateVisualEffectObject("SPSump",Myself)~EXIT
 
 CHAIN
 IF~Global("StoFailed","sto205",1)~THEN Stodrago TooWeak3
-~WHAT?~
+@56
 DO~SetGlobal("StoFailed","sto205",2)~
-=~I'm still here! There was a slight pull but far too weak. Where did you get this scroll, at Lucky Aello's Discount Store?~
+=@57
 END
-++~This was from a renowned temple. Maybe you are simply too...fat...~DO~AddJournalEntry(@1016,QUEST)~+ TooWeak4
-++~There was nothing wrong with the scroll. It may just not be powerful enough for a mighty creature like you.~ DO~AddJournalEntry(@1016,QUEST)~+ TooWeak4
-++~Enough of this now. I will do nothing anymore for you. Find yourself another fool.~EXIT
-++~Enough! I'll take your scales and your treasure by force.~DO~EraseJournalEntry(@1008) EraseJournalEntry(@1015) ENEMY()~EXIT
+++@58DO~AddJournalEntry(@1016,QUEST)~+ TooWeak4
+++@59 DO~AddJournalEntry(@1016,QUEST)~+ TooWeak4
+++@60EXIT
+++@61DO~EraseJournalEntry(@1008) EraseJournalEntry(@1015) ENEMY()~EXIT
 
 CHAIN
 IF~~THEN Stodrago TooWeak4
-~(Purr) You can do better, adventurer. There's a large city out there full of resources. One like you should be able to find a more powerful artefact that can suit OUR purpose.~EXIT
+@62EXIT
 
 CHAIN
 IF~Global("StoDragonspell","Global",3) PartyHasItem("StoTele")~THEN Stodrago RightOne1
-~Ha, I knew you had it in you, puny adventurer whose name I forgot. I'm a brilliant motivator after all.~
-=~May the journey begin!~
+@63
+=@64
 END
-++~This scroll should take you to a cave somewhere else on the Sword Coast once used by some pirates...~ + RightOne2
-++~This was a very costly adventure for me...~ + RightOne2
-++~And I knew you would betray me, wyrm...~ + RightOne2
+++@65 + RightOne2
+++@66 + RightOne2
+++@67 + RightOne2
 
 CHAIN
 IF~~THEN Stodrago RightOne2
-~This cave and everything in it is yours, <CHARNAME> - yes I know how you call yourself.~
+@68
 DO~SetGlobal("StoDragonspell","Global",4) TakePartyItem("StoTele")~
-=~Like Tiamat always used to say: Hasta la Vista, baby.~DO~ClearAllActions() Wait(1)StartCutSceneMode() StartCutScene("Stocut3")~ EXIT
+=@69DO~ClearAllActions() Wait(1)StartCutSceneMode() StartCutScene("Stocut3")~ EXIT

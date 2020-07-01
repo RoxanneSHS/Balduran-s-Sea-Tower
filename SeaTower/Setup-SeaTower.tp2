@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V1.0~
+VERSION ~V1.1~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -15,7 +15,7 @@ END
 AUTO_TRA ~SeaTower/translations/%s~
 LANGUAGE ~English~
          ~English~
-         ~SeaTower/translations/setup.tra~
+         ~SeaTower/translations/English/setup.tra~
 
 BEGIN ~Balduran's Sea Tower Quests~
 
@@ -195,9 +195,9 @@ COPY_EXISTING ~Stoscar.cre~ ~override~
   SAY INITIAL_MEETING #5166
   SAY BATTLE_CRY1 #5167
 
-ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 @1009 @1010 @1011 @1012 @1013 @1014 @1015 @1016 @1017 USING ~SeaTower/translations/OL_KnightJournal.tra~
+ADD_JOURNAL @1003 @1004 @1005 @1006 @1007 @1008 @1009 @1010 @1011 @1012 @1013 @1014 @1015 @1016 @1017 USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 
-ADD_JOURNAL @191 USING ~SeaTower/translations/Setup.tra~
+ADD_JOURNAL @191 USING ~SeaTower/translations/%LANGUAGE%/Setup.tra~
 
 COPY_EXISTING ~Misc78.ITM~ ~override/Stopass.itm~
         SAY NAME1 @122
@@ -292,8 +292,8 @@ COPY_EXISTING ~rndtres.2da~ ~override~
 REPLACE_TEXTUALLY ~ring10~ ~olpotn01~
 REPLACE_TEXTUALLY ~potn28~ ~olpotn02~
 
-EXTEND_BOTTOM ~%NEBaldursGate_CountingHouse_L2_BCS%.BCS~ ~SeaTower/scripts/ar0308.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
-EXTEND_BOTTOM ~%ValleyoftheTombs_Tomb_BCS%.BCS~ ~SeaTower/scripts/ar5001.baf~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
+EXTEND_BOTTOM ~%NEBaldursGate_CountingHouse_L2_BCS%.BCS~ ~SeaTower/scripts/ar0308.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
+EXTEND_BOTTOM ~%ValleyoftheTombs_Tomb_BCS%.BCS~ ~SeaTower/scripts/ar5001.baf~ EVALUATE_BUFFER USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 EXTEND_TOP ~%ValleyoftheTombs_BCS%.bcs~ ~SeaTower/scripts/ar5000.baf~ EVALUATE_BUFFER
 
 COMPILE 
@@ -301,9 +301,9 @@ COMPILE
 ~SeaTower/dialogue/Sto_library.D~
 ~SeaTower/dialogue/Sto_shoptemple.d~
 ~SeaTower/dialogue/Sto_dragon.d~
-~SeaTower/dialogue/Sto_Scarplot.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
-COMPILE ~SeaTower/dialogue/Sto_Brown.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
-COMPILE ~SeaTower/dialogue/Stoghost.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+~SeaTower/dialogue/Sto_Scarplot.d~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
+COMPILE ~SeaTower/dialogue/Sto_Brown.d~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
+COMPILE ~SeaTower/dialogue/Stoghost.d~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 COMPILE ~SeaTower/dialogue/Sto_Liaa.d~ EVALUATE_BUFFER
 
 COMPILE
@@ -326,10 +326,10 @@ COMPILE
 ~SeaTower/scripts/Stoghost.baf~
 ~SeaTower/scripts/Stodrago.baf~
 ~SeaTower/scripts/Stobrain.baf~
-~SeaTower/scripts/STO101.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
-COMPILE~SeaTower/scripts/STO202.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
-COMPILE~SeaTower/scripts/STOCut2.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
-COMPILE~SeaTower/scripts/STOCut3.baf~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+~SeaTower/scripts/STO101.baf~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
+COMPILE~SeaTower/scripts/STO202.baf~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
+COMPILE~SeaTower/scripts/STOCut2.baf~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
+COMPILE~SeaTower/scripts/STOCut3.baf~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~dragblac.bcs~ THEN BEGIN
 COMPILE~SeaTower/scripts/Dragblac.baf~
@@ -402,12 +402,12 @@ COMPILE ~SeaTower/scripts/STO110.baf~
 BEGIN ~Ghost Knights at Ulcaster~
 
 ACTION_IF GAME_IS ~bgee~ THEN BEGIN
-COMPILE ~SeaTower/dialogue/OL_Knightquest.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+COMPILE ~SeaTower/dialogue/OL_Knightquest.d~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 END ELSE BEGIN
-COMPILE ~SeaTower/dialogue/OL_Knightquest-EE.d~ USING ~SeaTower/translations/OL_KnightJournal.tra~
+COMPILE ~SeaTower/dialogue/OL_Knightquest-EE.d~ USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 END
 
-ADD_JOURNAL @1001 @1002 USING ~SeaTower/translations/OL_KnightJournal.tra~
+ADD_JOURNAL @1001 @1002 USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 
 COPY ~SeaTower/items/OLGHOSTR.ITM~ ~override~
         SAY NAME1 ~Ring~
@@ -515,7 +515,7 @@ COPY ~SeaTower/creatures/OLKNHTU.cre~ override
 	SAY 0xC @116
 	WRITE_ASCII 0x2cc ~KNIGHTSK~
 
-EXTEND_BOTTOM ~%FirewineRuins_BCS%.BCS~ ~SeaTower/scripts/OL5201.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/OL_KnightJournal.tra~
+EXTEND_BOTTOM ~%FirewineRuins_BCS%.BCS~ ~SeaTower/scripts/OL5201.BAF~ EVALUATE_BUFFER USING ~SeaTower/translations/%LANGUAGE%/OL_KnightJournal.tra~
 
 COPY_EXISTING ~%FirewineRuins%.ARE~ ~override~
 	LPF ALTER_AREA_ACTOR STR_VAR

@@ -7,8 +7,8 @@ ADD_STATE_TRIGGER Knight_ 0
 APPEND Knight_
 
 IF WEIGHT #-2~PartyHasItem("MISC82") Global("OL_knight_quest","GLOBAL",0)~THEN BEGIN HasArmour1
-SAY~So it was... So it is... Together enter... Together fall... Brother traitor completes the one...~
-=~But duty is not fulfilled...Kozah still haunts. Find the idol, secure the threat...we wait.~
+SAY@0
+=@1
 IF~~THEN DO~ TakePartyItem("MISC82")
 SetGlobal("bd_knight_quest","GLOBAL",1)
 Wait(1)
@@ -24,9 +24,9 @@ END
 //Erase original journal entry?
 
 IF WEIGHT #-3~PartyHasItem("MISC48")Global("OL_knight_quest","GLOBAL",1)~THEN BEGIN HasIdol1
-SAY~It is done...Kozah is in your hand, you are strong!~
-=~Aah...what is this?...~
-=~Sssstormss shall bring doom to theeee... Idollll so commandsssss... Echtah tuln no osa KOZAH!~
+SAY@2
+=@3
+=@4
 IF~~THEN DO~ SetGlobal("OL_knight_quest","GLOBAL",2)
 AddexperienceParty(1500)
 EraseJournalEntry(@1001)
