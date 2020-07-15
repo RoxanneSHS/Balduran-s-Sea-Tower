@@ -1,7 +1,7 @@
 BACKUP ~SeaTower/backup~
 AUTHOR ~Roxanne and Within Amnesia~
 
-VERSION ~V1.1~
+VERSION ~V1.2~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -16,6 +16,9 @@ AUTO_TRA ~SeaTower/translations/%s~
 LANGUAGE ~English~
          ~English~
          ~SeaTower/translations/English/setup.tra~
+LANGUAGE ~Russian~
+         ~Russian~
+         ~SeaTower/translations/Russian/setup.tra~
 
 BEGIN ~Balduran's Sea Tower Quests~
 
