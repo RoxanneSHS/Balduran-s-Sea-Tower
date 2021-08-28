@@ -218,7 +218,7 @@ Special: Restores 21 Hit Points.
 Weight: 1~
 
 @200= ~The shabby door conceals the town's most prestigious smithy.~
-@201= ~Michael of Baldur's Gate~
+@201= ~Stuart of Baldur's Gate~
 @202= ~Arms and Armour Emporium~
 @203= ~Emporium Merchant~
 @204= ~Hide Armour +1~
@@ -252,7 +252,7 @@ Requires:
 
 Weight: 3~
 @208= ~Long Sword +3 'Varscona'~
-@209= ~Blades of this type were long used by Sharran priests during the sacrificial rites of "Feast of the Moon" ceremonies. Legends say that, when she passed on, the remains of this sword's wielder were mummified and the blade was placed within her chest as a symbol of power. In the first stage of a long forgotten ritual, she was to have been exhumed in a season, born again in some new form. Unfortunately, cult wars killed the few that knew of her existence; her tomb became a prison where she was forgotten, and there she developed a rage that bordered on insanity. Her grave was eventually found, but it was deserted and gave no indication of her whereabouts. Some venture to say that her anger was so concentrated that she became one with the very blade of her weapon. Regardless, after hundreds of years surrounded by constant hate, the sword harvested a power of its own. It is now exceedingly deadly in combat. This fine beautifully crafted blade has been augmented via the master smith Michael of Baldur's Gate to become a force to be reckoned with. The latent cold rage burning deep within the blade's core of this ferocious weapon has been magnified and is the very source of the weapon's magical potency. Drawing from the sword's characteristic magical powers, the master smith has additionally unlocked a tremendous font of protective power that was laying dormant deep within the blade's soul. With such mastery of the craft Michael of Baldur's Gate has reforged this already exquisite weapon into a deadly bulwark that grants the wielder protection against nigh every kind mental deterrence. This instrument of carnage is one of the greatest safeguards in all of Faerun that one can possess from anything that can hinder one's path of destruction. Only fools or those of brave souls would now dare challenge any swordarm worth their salt wielding this commanding weapon.
+@209= ~Blades of this type were long used by Sharran priests during the sacrificial rites of "Feast of the Moon" ceremonies. Legends say that, when she passed on, the remains of this sword's wielder were mummified and the blade was placed within her chest as a symbol of power. In the first stage of a long forgotten ritual, she was to have been exhumed in a season, born again in some new form. Unfortunately, cult wars killed the few that knew of her existence; her tomb became a prison where she was forgotten, and there she developed a rage that bordered on insanity. Her grave was eventually found, but it was deserted and gave no indication of her whereabouts. Some venture to say that her anger was so concentrated that she became one with the very blade of her weapon. Regardless, after hundreds of years surrounded by constant hate, the sword harvested a power of its own. It is now exceedingly deadly in combat. This fine beautifully crafted blade has been augmented via the master smith Stuart of Baldur's Gate to become a force to be reckoned with. The latent cold rage burning deep within the blade's core of this ferocious weapon has been magnified and is the very source of the weapon's magical potency. Drawing from the sword's characteristic magical powers, the master smith has additionally unlocked a tremendous font of protective power that was laying dormant deep within the blade's soul. With such mastery of the craft Stuart of Baldur's Gate has reforged this already exquisite weapon into a deadly bulwark that grants the wielder protection against nigh every kind mental deterrence. This instrument of carnage is one of the greatest safeguards in all of Faerun that one can possess from anything that can hinder one's path of destruction. Only fools or those of brave souls would now dare challenge any swordarm worth their salt wielding this commanding weapon.
 
 STATISTICS:
 
@@ -266,7 +266,7 @@ Requires:
 
 Weight: 2~
 @210= ~Band of the Missing Page~
-@211= ~Michael of Baldur's Gate is a modest but remarkable smith. He was able to make use even of some broken dragon scales by sensing their power and using their remains to forge a headband usable by anyone.
+@211= ~Stuart of Baldur's Gate is a modest but remarkable smith. He was able to make use even of some broken dragon scales by sensing their power and using their remains to forge a headband usable by anyone.
 
 STATISTICS:
 
@@ -379,7 +379,7 @@ Equipped Abilities:
 - Melee THAC0: +3~
 @241 =~Fire Drake~
 @242 =~<CHARNAME>'s Flail~
-@243 =~With one rod of steel and another of bronze, this double-headed flail metes out punishment right and left. The weapon's carved wooden haft depicts scenes of battle in which <CHARNAME> wade through a field of orcs, threshing them like so much wheat. The weapon was forged by Michael of Baldur's Gate.
+@243 =~With one rod of steel and another of bronze, this double-headed flail metes out punishment right and left. The weapon's carved wooden haft depicts scenes of battle in which <CHARNAME> wade through a field of orcs, threshing them like so much wheat. The weapon was forged by Stuart of Baldur's Gate.
 
 STATISTICS:
 
@@ -393,7 +393,7 @@ Requires:
 
 Weight: 13~
 @244 =~<CHARNAME>'s Halberd~
-@245 =~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. Magic has been used by Michael of Baldur's Gate to forge this particular weapon for <CHARNAME> gifting it with enhanced abilities to slaughter foes.
+@245 =~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. Magic has been used by Stuart of Baldur's Gate to forge this particular weapon for <CHARNAME> gifting it with enhanced abilities to slaughter foes.
 
 STATISTICS:
 
@@ -407,7 +407,7 @@ Requires:
 
 Weight: 12~
 @246 =~<CHARNAME>'s Axe~
-@247 =~This magical axe has been forged by Michael of Baldur's Gate for <CHARNAME>.
+@247 =~This magical axe has been forged by Stuart of Baldur's Gate for <CHARNAME>.
 
 STATISTICS:
 
@@ -421,7 +421,7 @@ Requires:
 
 Weight: 5~
 @248 =~<CHARNAME>'s Short Sword~
-@249 =~One of many created in the name of the mage who first discovered how to enchant a blade in this manner, this replica of the weapon of the outlaw Garno was forged by Michael of Baldur's Gate for <CHARNAME>.
+@249 =~One of many created in the name of the mage who first discovered how to enchant a blade in this manner, this replica of the weapon of the outlaw Garno was forged by Stuart of Baldur's Gate for <CHARNAME>.
 
 STATISTICS:
 
@@ -442,7 +442,7 @@ Requires:
 
 Weight: 2~
 @250 =~Boomerang Dagger~
-@251 =~Michael of Baldur's Gate learned from his dwarven friends how to create items with the abilities of the famous Fullen Boomerang daggers.
+@251 =~Stuart of Baldur's Gate learned from his dwarven friends how to create items with the abilities of the famous Fullen Boomerang daggers.
 
 STATISTICS:
 
@@ -461,7 +461,7 @@ Requires:
 
 Weight: 1~
 @252 =~<CHARNAME>'s Hammer~
-@253 =~Crafted by Michael of Baldur's Gate, this warhammer sometimes channels the power of the ancient wyrm's mighty wings that might have been used when the famous smith created the weapon for <CHARNAME>.
+@253 =~Crafted by Stuart of Baldur's Gate, this warhammer sometimes channels the power of the ancient wyrm's mighty wings that might have been used when the famous smith created the weapon for <CHARNAME>.
 STATISTICS:
 
 Combat abilities:
