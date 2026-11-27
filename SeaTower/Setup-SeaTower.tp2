@@ -16,6 +16,9 @@ AUTO_TRA ~SeaTower/translations/%s~
 LANGUAGE ~English~
          ~English~
          ~SeaTower/translations/English/setup.tra~
+LANGUAGE ~Schinese~
+         ~schinese~
+         ~SeaTower/translations/schinese/setup.tra~
 LANGUAGE ~Russian (by tipun)~
          ~Russian~
          ~SeaTower/translations/Russian/setup.tra~
